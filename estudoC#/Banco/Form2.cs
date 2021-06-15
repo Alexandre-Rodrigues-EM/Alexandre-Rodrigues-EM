@@ -6,6 +6,8 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,7 +16,7 @@ namespace Banco
     public partial class Form2 : Form
     {
         private Form1 formPrincipal;
-       
+
         public Form2(Form1 formPrincipal)
         {
             this.formPrincipal = formPrincipal;
@@ -23,7 +25,7 @@ namespace Banco
             selecionaTipoConta.Items.Add("Conta Corrente");
             selecionaTipoConta.Items.Add("Conta Poupanca");
             selecionaTipoConta.Items.Add("Conta de Investimentos");
-            
+
         }
 
         private void criaNovaConta_Click(object sender, EventArgs e)
@@ -45,7 +47,7 @@ namespace Banco
                 }
                 else
                 if (selecionaTipoConta.Text == "Conta Poupanca")
-                    {
+                {
                     Conta novaConta = new ContaPoupanca()
                     {
                         numero = Conta.numeroDeContas + 1,
@@ -62,7 +64,7 @@ namespace Banco
                 {
                     Conta novaConta = new ContaDeInvestimentos()
                     {
-                        numero = Conta.numeroDeContas+1,
+                        numero = Conta.numeroDeContas + 1,
                         saldo = Convert.ToDouble(textoCriaSaldo.Text),
                         titular = new Cliente(textoCriaTitular.Text)
                     };
@@ -93,15 +95,30 @@ namespace Banco
 
         private void geraCadastro(Conta conta)
         {
-            FileStream saida = File.Open("contas.txt", FileMode.Append);
-            StreamWriter escritor = new StreamWriter(saida);
-            escritor.WriteLine("Numero da Conta: " + conta.numero + "\n");
-            escritor.WriteLine("Nome do Titula: " + conta.titular.nome + "\n");
-            escritor.WriteLine("Saldo da Conta: " + conta.saldo + "\n");
-            escritor.WriteLine("Tipo da Conta: " + selecionaTipoConta.Text + "\n");
-            escritor.Close();
-            saida.Close();
+            var cadastraConta = new Conta
+            {
+                numero = conta.numero,
+                titular = conta.titular,
+                saldo = conta.saldo
+            };              
+            string saida = "contas.json";
+            string jsonString = JsonSerializer.Serialize(cadastraConta,new JsonSerializerOptions { WriteIndented = true } );
+            File.WriteAllText(saida, jsonString);
+            Console.Write(jsonString);
+            
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textoCriaTitular_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+           
+  

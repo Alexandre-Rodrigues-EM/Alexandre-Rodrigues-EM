@@ -8,13 +8,18 @@ namespace Banco
 {
     interface ITributavel
     {
-        double calculaTributos(double Saldo);
+        double calculaTributos();
     }
 
     public interface IRentavel
     {
-        double calculaRendimento(double Saldo);
+        double calculaRendimento();
     }
+
+    //public SomaSaldo<T>
+    //    {
+            
+    //    }
 
 
 

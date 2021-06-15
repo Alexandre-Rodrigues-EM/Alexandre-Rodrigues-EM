@@ -102,7 +102,9 @@ namespace Banco
             // 
             // comboContas
             // 
+            this.comboContas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboContas.FormattingEnabled = true;
+            this.comboContas.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.comboContas.Location = new System.Drawing.Point(8, 22);
             this.comboContas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboContas.Name = "comboContas";

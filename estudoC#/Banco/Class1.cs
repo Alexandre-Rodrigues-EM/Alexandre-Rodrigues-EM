@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Banco
 {
-    public abstract class Conta
+    public class Conta
     {
+        private string tipoDeConta;
         public int numero;
         public static int numeroDeContas;
         public Cliente titular;
@@ -67,7 +68,8 @@ namespace Banco
 
     public class ContaCorrente : Conta, ITributavel
     {
-        public double calculaTributos(double Saldo)
+        public string tipoDeConta = "Conta Corrente";
+        public double calculaTributos()
         {
             double imposto;
             imposto = this.saldo*0.02;
@@ -80,6 +82,7 @@ namespace Banco
 
     public class ContaPoupanca : Conta, IRentavel
     {
+        public string tipoDeConta = "Conta Poupança";
         public override void Saca(double valor)
         {
             valor += 0.1;
@@ -100,9 +103,9 @@ namespace Banco
                 throw new ArgumentException();
             }
         }
-        double IRentavel.calculaRendimento(double Saldo)
+        double IRentavel.calculaRendimento()
         {
-            return this.saldo *= 1.03;
+            return this.saldo *= 0.03;
         }
     //    public const int id = 2;
     //    public const string nomeTipo = "Conta Poupanca";
@@ -110,16 +113,17 @@ namespace Banco
 
     public class ContaDeInvestimentos : Conta, ITributavel, IRentavel
     {
-        public double calculaTributos(double Saldo)
+        public string tipoDeConta = "Conta de Investimentos";
+        public double calculaTributos()
         {
             double imposto;
             imposto = this.saldo * 0.02;
             this.saldo -= imposto;
             return imposto;
         }
-        public double calculaRendimento(double Saldo)
+        public double calculaRendimento()
         {
-            return this.saldo * 1.09;
+            return this.saldo * 0.09;
         }
      //   public const tipoConta id = 3;
       //  public const string nomeTipo = "Conta de Investimentos";

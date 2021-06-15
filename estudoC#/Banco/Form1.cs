@@ -139,7 +139,7 @@ namespace Banco
                 if (selecionada is ITributavel)//ContaCorrente)
                 {
                      ContaCorrente corrente = (ContaCorrente)selecionada;
-                     double imposto = corrente.calculaTributos(corrente.saldo);
+                     double imposto = corrente.calculaTributos();
                      MessageBox.Show("Valor do imposto: R$" + Convert.ToString(imposto));
                      MessageBox.Show("Saldo: R$" + Convert.ToString(corrente.saldo));
                      textoSaldo.Text = Convert.ToString(corrente.saldo);
@@ -147,7 +147,7 @@ namespace Banco
                  else if (selecionada is ContaDeInvestimentos)
                  {
                      ContaDeInvestimentos corrente = (ContaDeInvestimentos)selecionada;
-                     double imposto = corrente.calculaTributos(corrente.saldo);
+                     double imposto = corrente.calculaTributos();
                      MessageBox.Show("Valor do imposto: R$" + Convert.ToString(imposto));
                      MessageBox.Show("Saldo: R$" + Convert.ToString(corrente.saldo));
                      textoSaldo.Text = Convert.ToString(corrente.saldo);
@@ -173,13 +173,13 @@ namespace Banco
             textoSaldo.Text = Convert.ToString(conta.saldo);
         }
 
-        private void consultaCadastro()
+/*        private void consultaCadastro()
         {
-            FileStream entrada = File.OpenRead("contas.txt");
+            string entrada = File.OpenRead("contas.txt");
             StreamReader leitor = new StreamReader(entrada);
- //           leitor 
-
-        }
+ //           leitor  }
+*/
+       
 
         private void btnGeraRelatorios_Click(object sender, EventArgs e)
         {

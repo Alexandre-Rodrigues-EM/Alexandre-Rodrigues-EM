@@ -56,6 +56,7 @@ namespace Banco
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nova Conta";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // selecionaTipoConta
             // 
@@ -112,6 +113,7 @@ namespace Banco
             this.textoCriaTitular.Name = "textoCriaTitular";
             this.textoCriaTitular.Size = new System.Drawing.Size(146, 23);
             this.textoCriaTitular.TabIndex = 0;
+            this.textoCriaTitular.TextChanged += new System.EventHandler(this.textoCriaTitular_TextChanged);
             // 
             // criaNovaConta
             // 
