@@ -1,0 +1,14 @@
+﻿TO DO LIST
+
+Apresentação de C# e .NET
+
+Conhecimentos a serem apresentados:
+[  ] Conversão de tipos
+[  ] Upcast
+[  ] Downcast
+[  ] Generics
+[  ] LINQ
+
+Escopo
+Programa de gestão de estoque
+- Classes de produtos com métodos de entrada e saída de estoque

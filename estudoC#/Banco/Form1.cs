@@ -41,6 +41,32 @@ namespace Banco
         private void Form1_Load(object sender, EventArgs e)
         {
             this.contas = new List<Conta>();
+            Conta c1 = new ContaCorrente();
+            c1.saldo = 500;
+            c1.numero = ++Conta.numeroDeContas;
+            c1.titular = new Cliente("José Alvaro");
+            this.AdicionaConta(c1);
+            Conta c2 = new ContaCorrente();
+            c2.saldo = 1200;
+            c2.numero = ++Conta.numeroDeContas;
+            c2.titular = new Cliente("Pietro Félix");
+            this.AdicionaConta(c2);
+            Conta c3 = new ContaPoupanca();
+            c3.saldo = 2300;
+            c3.numero = ++Conta.numeroDeContas;
+            c3.titular = new Cliente("Igor Navarro");
+            this.AdicionaConta(c3);
+            Conta c4 = new ContaDeInvestimentos();
+            c4.saldo = 600;
+            c4.numero = ++Conta.numeroDeContas;
+            c4.titular = new Cliente("Washington Veiga");
+            this.AdicionaConta(c4);
+            Conta c5 = new ContaDeInvestimentos();
+            c5.saldo = 3500;
+            c5.numero = ++Conta.numeroDeContas;
+            c5.titular = new Cliente("Alfonso Costa");
+            this.AdicionaConta(c5);
+
         }
 
 

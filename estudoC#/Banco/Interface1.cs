@@ -16,11 +16,4 @@ namespace Banco
         double calculaRendimento();
     }
 
-    //public SomaSaldo<T>
-    //    {
-            
-    //    }
-
-
-
 }

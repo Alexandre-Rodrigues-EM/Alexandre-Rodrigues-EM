@@ -35,20 +35,28 @@ namespace Banco
             this.btnImprimeRelatorio = new System.Windows.Forms.Button();
             this.telaRelatorio = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.valorDeFiltro = new System.Windows.Forms.TextBox();
+            this.selecionaFiltroDeValor = new System.Windows.Forms.ComboBox();
+            this.selecionaTipoDeConta = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.mostraPorcentagemFiltro = new System.Windows.Forms.Label();
+            this.mostraTitularMenorSaldo = new System.Windows.Forms.Label();
+            this.mostraTitularMaiorSaldo = new System.Windows.Forms.Label();
+            this.mostraNumDeContas = new System.Windows.Forms.Label();
+            this.mostraMenorSaldo = new System.Windows.Forms.Label();
+            this.mostraMaiorSaldo = new System.Windows.Forms.Label();
+            this.mostraMediaSaldos = new System.Windows.Forms.Label();
+            this.mostraSomaSaldos = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -103,9 +111,9 @@ namespace Banco
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.valorDeFiltro);
+            this.groupBox1.Controls.Add(this.selecionaFiltroDeValor);
+            this.groupBox1.Controls.Add(this.selecionaTipoDeConta);
             this.groupBox1.Location = new System.Drawing.Point(13, 188);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(405, 79);
@@ -113,8 +121,60 @@ namespace Banco
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar resultado";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 15);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Valor do saldo";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 15);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Tipo de conta";
+            // 
+            // valorDeFiltro
+            // 
+            this.valorDeFiltro.Location = new System.Drawing.Point(234, 50);
+            this.valorDeFiltro.Name = "valorDeFiltro";
+            this.valorDeFiltro.Size = new System.Drawing.Size(165, 23);
+            this.valorDeFiltro.TabIndex = 2;
+            // 
+            // selecionaFiltroDeValor
+            // 
+            this.selecionaFiltroDeValor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selecionaFiltroDeValor.FormattingEnabled = true;
+            this.selecionaFiltroDeValor.Location = new System.Drawing.Point(129, 50);
+            this.selecionaFiltroDeValor.Name = "selecionaFiltroDeValor";
+            this.selecionaFiltroDeValor.Size = new System.Drawing.Size(99, 23);
+            this.selecionaFiltroDeValor.TabIndex = 1;
+            // 
+            // selecionaTipoDeConta
+            // 
+            this.selecionaTipoDeConta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selecionaTipoDeConta.FormattingEnabled = true;
+            this.selecionaTipoDeConta.Location = new System.Drawing.Point(234, 23);
+            this.selecionaTipoDeConta.Name = "selecionaTipoDeConta";
+            this.selecionaTipoDeConta.Size = new System.Drawing.Size(165, 23);
+            this.selecionaTipoDeConta.TabIndex = 0;
+            this.selecionaTipoDeConta.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.mostraPorcentagemFiltro);
+            this.groupBox2.Controls.Add(this.mostraTitularMenorSaldo);
+            this.groupBox2.Controls.Add(this.mostraTitularMaiorSaldo);
+            this.groupBox2.Controls.Add(this.mostraNumDeContas);
+            this.groupBox2.Controls.Add(this.mostraMenorSaldo);
+            this.groupBox2.Controls.Add(this.mostraMaiorSaldo);
+            this.groupBox2.Controls.Add(this.mostraMediaSaldos);
+            this.groupBox2.Controls.Add(this.mostraSomaSaldos);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
@@ -130,100 +190,86 @@ namespace Banco
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Resultados";
             // 
-            // comboBox1
+            // mostraPorcentagemFiltro
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(234, 23);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(165, 23);
-            this.comboBox1.TabIndex = 0;
+            this.mostraPorcentagemFiltro.AutoSize = true;
+            this.mostraPorcentagemFiltro.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mostraPorcentagemFiltro.Location = new System.Drawing.Point(355, 82);
+            this.mostraPorcentagemFiltro.Name = "mostraPorcentagemFiltro";
+            this.mostraPorcentagemFiltro.Size = new System.Drawing.Size(0, 15);
+            this.mostraPorcentagemFiltro.TabIndex = 15;
             // 
-            // comboBox2
+            // mostraTitularMenorSaldo
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(129, 50);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(99, 23);
-            this.comboBox2.TabIndex = 1;
+            this.mostraTitularMenorSaldo.AutoSize = true;
+            this.mostraTitularMenorSaldo.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mostraTitularMenorSaldo.Location = new System.Drawing.Point(253, 67);
+            this.mostraTitularMenorSaldo.Name = "mostraTitularMenorSaldo";
+            this.mostraTitularMenorSaldo.Size = new System.Drawing.Size(0, 15);
+            this.mostraTitularMenorSaldo.TabIndex = 14;
             // 
-            // textBox1
+            // mostraTitularMaiorSaldo
             // 
-            this.textBox1.Location = new System.Drawing.Point(234, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 23);
-            this.textBox1.TabIndex = 2;
+            this.mostraTitularMaiorSaldo.AutoSize = true;
+            this.mostraTitularMaiorSaldo.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mostraTitularMaiorSaldo.Location = new System.Drawing.Point(355, 52);
+            this.mostraTitularMaiorSaldo.Name = "mostraTitularMaiorSaldo";
+            this.mostraTitularMaiorSaldo.Size = new System.Drawing.Size(0, 15);
+            this.mostraTitularMaiorSaldo.TabIndex = 13;
             // 
-            // label1
+            // mostraNumDeContas
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Tipo de conta";
+            this.mostraNumDeContas.AutoSize = true;
+            this.mostraNumDeContas.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mostraNumDeContas.Location = new System.Drawing.Point(161, 82);
+            this.mostraNumDeContas.Name = "mostraNumDeContas";
+            this.mostraNumDeContas.Size = new System.Drawing.Size(0, 15);
+            this.mostraNumDeContas.TabIndex = 12;
             // 
-            // label2
+            // mostraMenorSaldo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Valor do saldo";
+            this.mostraMenorSaldo.AutoSize = true;
+            this.mostraMenorSaldo.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mostraMenorSaldo.Location = new System.Drawing.Point(161, 67);
+            this.mostraMenorSaldo.Name = "mostraMenorSaldo";
+            this.mostraMenorSaldo.Size = new System.Drawing.Size(0, 15);
+            this.mostraMenorSaldo.TabIndex = 11;
             // 
-            // label3
+            // mostraMaiorSaldo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Total dos Saldos";
+            this.mostraMaiorSaldo.AutoSize = true;
+            this.mostraMaiorSaldo.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mostraMaiorSaldo.Location = new System.Drawing.Point(161, 52);
+            this.mostraMaiorSaldo.Name = "mostraMaiorSaldo";
+            this.mostraMaiorSaldo.Size = new System.Drawing.Size(0, 15);
+            this.mostraMaiorSaldo.TabIndex = 10;
             // 
-            // label4
+            // mostraMediaSaldos
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 15);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Média de saldos";
+            this.mostraMediaSaldos.AutoSize = true;
+            this.mostraMediaSaldos.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mostraMediaSaldos.Location = new System.Drawing.Point(161, 37);
+            this.mostraMediaSaldos.Name = "mostraMediaSaldos";
+            this.mostraMediaSaldos.Size = new System.Drawing.Size(0, 15);
+            this.mostraMediaSaldos.TabIndex = 9;
             // 
-            // label5
+            // mostraSomaSaldos
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 15);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Maior saldo";
+            this.mostraSomaSaldos.AutoSize = true;
+            this.mostraSomaSaldos.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.mostraSomaSaldos.Location = new System.Drawing.Point(161, 22);
+            this.mostraSomaSaldos.Name = "mostraSomaSaldos";
+            this.mostraSomaSaldos.Size = new System.Drawing.Size(0, 15);
+            this.mostraSomaSaldos.TabIndex = 8;
             // 
-            // label6
+            // label10
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 67);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 15);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Menor saldo";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(204, 52);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 15);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Titular:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(204, 67);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 15);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Titular:";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(204, 82);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(143, 15);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Porcetagem sobre o total:";
             // 
             // label9
             // 
@@ -234,14 +280,59 @@ namespace Banco
             this.label9.TabIndex = 6;
             this.label9.Text = "Numero de contas:";
             // 
-            // label10
+            // label8
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(204, 82);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(143, 15);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Porcetagem sobre o total:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(204, 67);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 15);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Titular:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(204, 52);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(43, 15);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Titular:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 67);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 15);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Menor saldo";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 15);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Maior saldo:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 15);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Média de saldos:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Total dos Saldos:";
             // 
             // Form3
             // 
@@ -274,9 +365,9 @@ namespace Banco
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox valorDeFiltro;
+        private System.Windows.Forms.ComboBox selecionaFiltroDeValor;
+        private System.Windows.Forms.ComboBox selecionaTipoDeConta;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -286,5 +377,13 @@ namespace Banco
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label mostraPorcentagemFiltro;
+        private System.Windows.Forms.Label mostraTitularMenorSaldo;
+        private System.Windows.Forms.Label mostraTitularMaiorSaldo;
+        private System.Windows.Forms.Label mostraNumDeContas;
+        private System.Windows.Forms.Label mostraMenorSaldo;
+        private System.Windows.Forms.Label mostraMaiorSaldo;
+        private System.Windows.Forms.Label mostraMediaSaldos;
+        private System.Windows.Forms.Label mostraSomaSaldos;
     }
 }

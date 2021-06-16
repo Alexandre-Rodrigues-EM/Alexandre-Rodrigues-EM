@@ -11,6 +11,7 @@ namespace Banco
         private string tipoDeConta;
         public int numero;
         public static int numeroDeContas;
+        public static string[] tiposDeConta = new string[] { "Conta Poupança", "Conta Corrente", "Conta de Investimentos" };
         public Cliente titular;
         public double saldo;
     //    public tipoConta id;

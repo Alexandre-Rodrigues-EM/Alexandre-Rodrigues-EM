@@ -1,0 +1,10 @@
+﻿TO DO LIST
+
+Apresentação de C# e .NET
+
+Conhecimentos a serem apresentados:
+[  ] Conversão de tipos
+[  ] Upcast
+[  ] Downcast
+[  ] Generics
+[  ] LINQ
