@@ -8,7 +8,7 @@ namespace Banco
 {
     public class Conta
     {
-        private string tipoDeConta;
+        public string tipoDeConta;
         public int numero;
         public static int numeroDeContas;
         public static string[] tiposDeConta = new string[] { "Conta Poupança", "Conta Corrente", "Conta de Investimentos" };
@@ -69,7 +69,7 @@ namespace Banco
 
     public class ContaCorrente : Conta, ITributavel
     {
-        public string tipoDeConta = "Conta Corrente";
+        public new string tipoDeConta = "Conta Corrente";
         public double calculaTributos()
         {
             double imposto;
@@ -83,7 +83,7 @@ namespace Banco
 
     public class ContaPoupanca : Conta, IRentavel
     {
-        public string tipoDeConta = "Conta Poupança";
+        public new string tipoDeConta = "Conta Poupança";
         public override void Saca(double valor)
         {
             valor += 0.1;
@@ -114,7 +114,7 @@ namespace Banco
 
     public class ContaDeInvestimentos : Conta, ITributavel, IRentavel
     {
-        public string tipoDeConta = "Conta de Investimentos";
+        public new string tipoDeConta = "Conta de Investimentos";
         public double calculaTributos()
         {
             double imposto;

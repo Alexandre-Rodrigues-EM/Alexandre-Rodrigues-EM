@@ -3,8 +3,8 @@
 Apresentação de C# e .NET
 
 Conhecimentos a serem apresentados:
-[  ] Conversão de tipos
+[OK] Conversão de tipos
 [  ] Upcast
 [  ] Downcast
-[  ] Generics
-[  ] LINQ
+[OK] Generics
+[ok] LINQ

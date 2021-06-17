@@ -166,9 +166,9 @@ namespace Banco
                 {
                      ContaCorrente corrente = (ContaCorrente)selecionada;
                      double imposto = corrente.calculaTributos();
-                     MessageBox.Show("Valor do imposto: R$" + Convert.ToString(imposto));
-                     MessageBox.Show("Saldo: R$" + Convert.ToString(corrente.saldo));
-                     textoSaldo.Text = Convert.ToString(corrente.saldo);
+                     MessageBox.Show("Valor do imposto: " + imposto.ToString("c"));
+                     MessageBox.Show("Saldo:  " + corrente.saldo.ToString("c"));
+                     textoSaldo.Text = corrente.saldo.ToString("c");
                  }
                  else if (selecionada is ContaDeInvestimentos)
                  {
@@ -189,6 +189,7 @@ namespace Banco
         {
             Conta busca = dicionarioDeContas[Convert.ToInt32(valorBuscaConta.Text)];
             mostraDados(busca);
+            comboContas.SelectedItem = null;
         }
 
 
