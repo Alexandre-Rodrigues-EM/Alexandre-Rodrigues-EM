@@ -44,11 +44,6 @@ namespace Banco
 
             }
         }
-        private void valorDeFiltro_TextChanged(object sender, EventArgs e)
-        {
-            
-
-        }
 
         private void realizaFiltro_Click(object sender, EventArgs e)
         {
@@ -221,6 +216,11 @@ namespace Banco
             }
         }
 
+        private void valorDeFiltro_TextChanged(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }
  

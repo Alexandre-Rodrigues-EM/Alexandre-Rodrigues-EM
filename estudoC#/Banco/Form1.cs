@@ -20,47 +20,36 @@ namespace Banco
         public Form1()
         {
             InitializeComponent();
-            
-            /*/	vamos	inicializar	algumas	instâncias	de	Conta.
-            Conta c1 = new Conta();
-            c1.titular = new Cliente("victor");
-            c1.numero = 1;
-            this.AdicionaConta(c1);
-            Conta c2 = new ContaPoupanca();
-            c2.titular = new Cliente("mauricio");
-            c2.numero = 2;
-            this.AdicionaConta(c2);
-            Conta c3 = new ContaCorrente();
-            c3.titular = new Cliente("osni");
-            c3.numero = 3;
-            this.AdicionaConta(c3);
-            */
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             this.contas = new List<Conta>();
+            
             Conta c1 = new ContaCorrente();
             c1.saldo = 500;
             c1.numero = ++Conta.numeroDeContas;
             c1.titular = new Cliente("José Alvaro");
             this.AdicionaConta(c1);
+            
             Conta c2 = new ContaCorrente();
             c2.saldo = 1200;
             c2.numero = ++Conta.numeroDeContas;
             c2.titular = new Cliente("Pietro Félix");
             this.AdicionaConta(c2);
+            
             Conta c3 = new ContaPoupanca();
             c3.saldo = 2300;
             c3.numero = ++Conta.numeroDeContas;
             c3.titular = new Cliente("Igor Navarro");
             this.AdicionaConta(c3);
+            
             Conta c4 = new ContaDeInvestimentos();
             c4.saldo = 600;
             c4.numero = ++Conta.numeroDeContas;
             c4.titular = new Cliente("Washington Veiga");
             this.AdicionaConta(c4);
+            
             Conta c5 = new ContaDeInvestimentos();
             c5.saldo = 3500;
             c5.numero = ++Conta.numeroDeContas;
@@ -69,26 +58,6 @@ namespace Banco
 
         }
 
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -136,10 +105,6 @@ namespace Banco
             MessageBox.Show("Deposito realizado às " + DateTime.Now);
         }
 
-        private void contaDestino_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void realizaTransferencia_Click(object sender, EventArgs e)
         {
@@ -200,18 +165,31 @@ namespace Banco
             textoSaldo.Text = Convert.ToString(conta.saldo);
         }
 
-/*        private void consultaCadastro()
-        {
-            string entrada = File.OpenRead("contas.txt");
-            StreamReader leitor = new StreamReader(entrada);
- //           leitor  }
-*/
-       
 
         private void btnGeraRelatorios_Click(object sender, EventArgs e)
         {
             Form3 form = new Form3(contas);
             form.ShowDialog();
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void contaDestino_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
