@@ -144,7 +144,7 @@ namespace Banco
                 Conta destino = this.contas[indiceDestino];
                 this.contas[indiceOrigem].Transfere(valor, this.contas[indiceDestino]);
                 mostraDados(selecionada);
-                MessageBox.Show("Transferência de {1} realizada", valor.ToString("c"));
+                MessageBox.Show($"Transferência de {valor.ToString("c")} realizada");
             }
         }
 

@@ -1,13 +1,12 @@
-1
-José Alvaro
-500
+6
+Reinaldo Otomano
+2000
 Banco.ContaCorrente
 2
 Pietro Félix
 1200
 Banco.ContaCorrente
-3
-Igor Navarro
+or Navarro
 2300
 Banco.ContaPoupanca
 4

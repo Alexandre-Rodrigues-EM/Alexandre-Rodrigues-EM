@@ -1,10 +1,10 @@
-1
-José Alvaro
-500
-Banco.ContaCorrente
 2
 Pietro Félix
 1200
+Banco.ContaCorrente
+1
+José Alvaro
+500
 Banco.ContaCorrente
 3
 Igor Navarro

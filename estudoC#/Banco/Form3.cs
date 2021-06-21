@@ -77,13 +77,17 @@ namespace Banco
         {
             telaRelatorio.Items.Clear();
 
-            var calculaSaldo = contasSelecionadas.Sum(c => c.saldo);
+        /*LINQ
+        * LINQ é a linguagem simplificada de consultas imbuída na linguagem C# e na plataforma .NET, com estrutura semelhante a SQL.
+        * Nos blocos de código a seguir são realizadas operações com métodos de LINQ: soma (.Sum()), média (.Average()) e contagem (.Count()), pela fluent syntax.
+        */
+            var calculaSaldo = contasSelecionadas.Sum(c => c.saldo);//Realiza uma consulta a contasSelecionadas e retorna o saldo de cada objeto na lista, em seguida soma todos os saldos
             mostraSomaSaldos.Text = calculaSaldo.ToString("c");
 
-            var calculaMedia = contasSelecionadas.Average(c => c.saldo);
+            var calculaMedia = contasSelecionadas.Average(c => c.saldo);//Realiza uma consulta a contasSelecionadas e retorna o saldo de cada objeto na lista, em seguida faz a média de todos os saldos
             mostraMediaSaldos.Text = calculaMedia.ToString("c");
 
-            mostraNumDeContas.Text = contasSelecionadas.Count().ToString();
+            mostraNumDeContas.Text = contasSelecionadas.Count().ToString();//Realiza uma consulta a contasSelecionadas e retorna a quantidade de objetos na lista.
             mostraPorcentagemFiltro.Text = (Convert.ToDouble(contasSelecionadas.Count()) / Convert.ToDouble(contas.Count())).ToString("p");
 
 
@@ -101,10 +105,10 @@ namespace Banco
 
         private void filtraMenor(List<Conta> lista)
         {
-            var valorMenorSaldo = lista.Min(c => c.saldo);
+            var valorMenorSaldo = lista.Min(c => c.saldo);//Realiza uma consulta a contasSelecionadas e retorna o menor saldo da lista
             var encontraTitularMenorSaldo = (from c in lista
-                                             where c.saldo == valorMenorSaldo
-                                             select c.titular.nome).Single();
+                                                where c.saldo == valorMenorSaldo
+                                                select c.titular.nome).Single();
 
             mostraTitularMenorSaldo.Text = encontraTitularMenorSaldo;
             mostraMenorSaldo.Text = valorMenorSaldo.ToString("c");
@@ -113,10 +117,10 @@ namespace Banco
 
         private void filtraMaior(List<Conta> lista)
         {
-            var valorMaiorSaldo = lista.Max(c => c.saldo);
+            var valorMaiorSaldo = lista.Max(c => c.saldo);//Realiza uma consulta a contasSelecionadas e retorna o maior saldo da lista
             var encontraTitularMaiorSaldo = (from c in lista
-                                             where c.saldo == valorMaiorSaldo
-                                             select c.titular.nome).Single();
+                                                where c.saldo == valorMaiorSaldo
+                                                select c.titular.nome).Single();
 
             mostraTitularMaiorSaldo.Text = encontraTitularMaiorSaldo;
             mostraMaiorSaldo.Text = valorMaiorSaldo.ToString("c");
@@ -130,7 +134,7 @@ namespace Banco
             selecionaTipoDeConta.SelectedItem = null;
             valorDeFiltro.Clear();
             var GeraRelatorioGeral = from c in contas
-                                     select c;
+                                        select c;
 
             foreach (var c in GeraRelatorioGeral)
             {
@@ -198,11 +202,10 @@ namespace Banco
             }
         }
 
-        /*LINQ
-         * LINQ é a linguagem simplificada de consultas imbuída na linguagem C# e na plataforma .NET, com estrutura semelhante a SQL.
-         * Nos blocos de código a seguir são realizadas consultas simples aos objetos das listas, vez que LINQ é voltado para a consulta em coleções,
-         * mas são possíveis várias outras operações através de operadores não utilizados aqui como join, group, orderby.
-         */
+        /*LINQ - Continuação
+        * Nos blocos de código a seguir são realizadas consultas simples aos objetos das listas, vez que LINQ é voltado para a consulta em coleções,
+        * mas são possíveis várias  operações através de operadores como join, group, orderby.
+        */
         static void filtraContasTipo<T>(List<Conta> listaOrigem, List<Conta> listaDestino, T tFiltro)
         {
             var filtro = from c in listaOrigem
