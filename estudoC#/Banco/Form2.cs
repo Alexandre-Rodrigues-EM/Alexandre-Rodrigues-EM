@@ -32,7 +32,7 @@ namespace Banco
         {
             try
             {
-                if (selecionaTipoConta.Text == "Conta Corrente")
+                if (selecionaTipoConta.Text == "Conta Corrente" && textoCriaTitular.Text != null && textoCriaSaldo.Text != null)
                 {
                     Conta novaConta = new ContaCorrente()
                     {
@@ -41,12 +41,13 @@ namespace Banco
                         titular = new Cliente(textoCriaTitular.Text)
                     };
                     this.formPrincipal.AdicionaConta(novaConta);
-                    geraCadastro(novaConta);
                     Conta.numeroDeContas++;
+                    MessageBox.Show("Conta criada com sucesso");
+                    this.Close();
 
                 }
                 else
-                if (selecionaTipoConta.Text == "Conta Poupanca")
+                if (selecionaTipoConta.Text == "Conta Poupanca" && textoCriaTitular.Text != null && textoCriaSaldo.Text != null)
                 {
                     Conta novaConta = new ContaPoupanca()
                     {
@@ -55,12 +56,13 @@ namespace Banco
                         titular = new Cliente(textoCriaTitular.Text)
                     };
                     this.formPrincipal.AdicionaConta(novaConta);
-                    geraCadastro(novaConta);
                     Conta.numeroDeContas++;
+                    MessageBox.Show("Conta criada com sucesso");
+                    this.Close();
 
                 }
                 else
-                if (selecionaTipoConta.Text == "Conta de Investimentos")
+                if (selecionaTipoConta.Text == "Conta de Investimentos" && textoCriaTitular.Text != null && textoCriaSaldo.Text != null)
                 {
                     Conta novaConta = new ContaDeInvestimentos()
                     {
@@ -70,12 +72,14 @@ namespace Banco
                     };
 
                     this.formPrincipal.AdicionaConta(novaConta);
-                    geraCadastro(novaConta);
                     Conta.numeroDeContas++;
+                    MessageBox.Show("Conta criada com sucesso");
+                    this.Close();
                 }
-
-                MessageBox.Show("Conta criada com sucesso");
-                this.Close();
+                else
+                {
+                    MessageBox.Show("Insira todas as informações solicitadas");
+                }
             }
             catch (Exception ex)
             {
@@ -92,22 +96,7 @@ namespace Banco
         {
 
         }
-
-        private void geraCadastro(Conta conta)
-        {
-            var cadastraConta = new Conta
-            {
-                numero = conta.numero,
-                titular = conta.titular,
-                saldo = conta.saldo
-            };              
-            string saida = "contas.json";
-            string jsonString = JsonSerializer.Serialize(cadastraConta,new JsonSerializerOptions { WriteIndented = true } );
-            File.WriteAllText(saida, jsonString);
-            Console.Write(jsonString);
-            
-        }
-
+                
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 

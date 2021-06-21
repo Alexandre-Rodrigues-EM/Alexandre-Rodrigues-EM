@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +16,7 @@ namespace Banco
     {
         List<Conta> contas = new List<Conta>();
         List<Conta> contasFiltradas = new List<Conta>();
+        int numeroDoRelatorio = 0;
 
         public Form3(List<Conta> contas)
         {
@@ -23,6 +26,7 @@ namespace Banco
             selecionaFiltroDeValor.Items.Add("Acima de");
             selecionaFiltroDeValor.Items.Add("Abaixo de");
             mostraDados(contas);
+            
 
         }
 
@@ -50,16 +54,24 @@ namespace Banco
             contasFiltradas.Clear();
             var tipoSelecionado = selecionaTipoDeConta.SelectedItem;
             var tipoDeFiltro = selecionaFiltroDeValor.Text;
-            var valorDoFiltro = Convert.ToDouble(valorDeFiltro.Text);
-            geraListaFiltrada(contasFiltradas, tipoSelecionado.ToString(), tipoDeFiltro, valorDoFiltro);
-            if (contasFiltradas.Count == 0)
+            double valorDoFiltro;
+            if (Double.TryParse(valorDeFiltro.Text, out valorDoFiltro))
             {
-                MessageBox.Show("Não há contas com as características selecionadas.");
+                geraListaFiltrada(contasFiltradas, tipoSelecionado.ToString(), tipoDeFiltro, valorDoFiltro);
+                if (contasFiltradas.Count == 0)
+                {
+                    MessageBox.Show("Não há contas com as características selecionadas.");
+                }
+                else
+                {
+                    mostraDados(contasFiltradas);
+                }
             }
             else
             {
-                mostraDados(contasFiltradas);
+                MessageBox.Show("Selecione os parâmetros para busca");
             }
+            
         }
         private void mostraDados(List<Conta> contasSelecionadas)
         {
@@ -127,15 +139,16 @@ namespace Banco
 
         }
 
+        // Abaixo temos um método genérico capaz de receber até três tipos diferentes simultaneamente em seus parâmetros
         private void geraListaFiltrada<T1, T2, T3>(List<Conta> Filtrada, T1 _T1, T2 _T2, T3 _T3)
         {
 
             if (_T2 is -1 && _T3 is -1)
             {
-                if (_T1 is "Conta Corrente" || _T1 is ContaCorrente)
+                if (_T1 is "Conta Corrente" || _T1 is ContaCorrente)//Conversão de tipos - Uso do operador booleano "is"
                 {
 
-                    filtraContasTipo(contas, Filtrada, _T1 as ContaCorrente);
+                    filtraContasTipo(contas, Filtrada, _T1 as ContaCorrente);//Na convesão de tipos, enquanto o operador is verifica se é possível a conversão, o operador "as" realiza a conversão
                 }
                 else if (_T1 as string == "Conta Poupança" || _T1 is ContaPoupanca)
                 {
@@ -152,7 +165,6 @@ namespace Banco
             {
                 if (_T1 is string && _T2 is double)
                 {
-                    //List<Conta> ListaMeio = new List<Conta>;
                     var valor = Convert.ToDouble(_T2);
                     filtraContasValor(contas, Filtrada, _T1 as string, valor);
                 }
@@ -184,14 +196,18 @@ namespace Banco
 
                 }
             }
-
-            
-
         }
+
+        /*LINQ
+         * LINQ é a linguagem simplificada de consultas imbuída na linguagem C# e na plataforma .NET, com estrutura semelhante a SQL.
+         * Nos blocos de código a seguir são realizadas consultas simples aos objetos das listas, vez que LINQ é voltado para a consulta em coleções,
+         * mas são possíveis várias outras operações através de operadores não utilizados aqui como join, group, orderby.
+         */
         static void filtraContasTipo<T>(List<Conta> listaOrigem, List<Conta> listaDestino, T tFiltro)
         {
             var filtro = from c in listaOrigem
                          where c is T
+                         orderby c.saldo descending
                          select c;
             foreach (var c in filtro)
                 listaDestino.Add(c);
@@ -200,7 +216,7 @@ namespace Banco
         {
             if (tFiltro is "Acima de")
             {
-                var filtro = from c in listaOrigem
+                var filtro = from c in listaOrigem //Querry expression style
                              where c.saldo >= tValor
                              select c;
                 foreach (var c in filtro)
@@ -208,9 +224,9 @@ namespace Banco
             }
             else if (tFiltro is "Abaixo de")
             {
-                var filtro = from c in listaOrigem
-                             where c.saldo <= tValor
-                             select c;
+                var filtro = listaOrigem.Where(c => c.saldo <= tValor) //Fluent expression style
+                    .OrderBy(c => c.numero)
+                    .Select (c => c);
                 foreach (var c in filtro)
                     listaDestino.Add(c);
             }
@@ -221,6 +237,44 @@ namespace Banco
 
 
         }
+
+        private void btnImprimeRelatorio_Click(object sender, EventArgs e)
+        {
+
+            string relatorio = $"relatoriodecontas-{numeroDoRelatorio}.txt";
+            Stream saida = new FileStream (relatorio, FileMode.OpenOrCreate);
+            StreamWriter escritor = new StreamWriter(saida);
+            if (selecionaTipoDeConta.SelectedIndex == -1)
+            {
+                foreach (var c in contas)
+                {
+                    escritor.WriteLine(c.numero);
+                    escritor.WriteLine(c.titular.nome);
+                    escritor.WriteLine(c.saldo);
+                    escritor.WriteLine(c.GetType());
+                }
+                numeroDoRelatorio++;
+            }
+            else
+            {
+                foreach (var c in contasFiltradas)
+                {
+                    escritor.WriteLine(c.numero);
+                    escritor.WriteLine(c.titular.nome);
+                    escritor.WriteLine(c.saldo);
+                    escritor.WriteLine(c.GetType());
+                }
+                numeroDoRelatorio++;
+
+            }
+            escritor.Close();
+            saida.Close();
+            MessageBox.Show("Relatório gerado na pasta raíz");
+
+
+        }
     }
+        
+    
 }
  

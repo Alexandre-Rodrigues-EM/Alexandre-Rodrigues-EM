@@ -302,6 +302,7 @@ namespace Banco
             // 
             // contaDestino
             // 
+            this.contaDestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.contaDestino.FormattingEnabled = true;
             this.contaDestino.Location = new System.Drawing.Point(286, 23);
             this.contaDestino.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);

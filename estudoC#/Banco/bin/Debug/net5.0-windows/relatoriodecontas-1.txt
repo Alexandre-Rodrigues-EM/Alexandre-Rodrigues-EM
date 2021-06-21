@@ -1,0 +1,20 @@
+1
+José Alvaro
+500
+Banco.ContaCorrente
+2
+Pietro Félix
+1200
+Banco.ContaCorrente
+3
+Igor Navarro
+2300
+Banco.ContaPoupanca
+4
+Washington Veiga
+600
+Banco.ContaDeInvestimentos
+5
+Alfonso Costa
+3500
+Banco.ContaDeInvestimentos

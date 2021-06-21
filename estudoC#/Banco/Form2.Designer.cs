@@ -60,6 +60,7 @@ namespace Banco
             // 
             // selecionaTipoConta
             // 
+            this.selecionaTipoConta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.selecionaTipoConta.FormattingEnabled = true;
             this.selecionaTipoConta.Location = new System.Drawing.Point(127, 78);
             this.selecionaTipoConta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);

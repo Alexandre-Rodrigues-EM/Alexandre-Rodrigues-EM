@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Banco
 {
@@ -14,26 +15,21 @@ namespace Banco
         public static string[] tiposDeConta = new string[] { "Conta Poupança", "Conta Corrente", "Conta de Investimentos" };
         public Cliente titular;
         public double saldo;
-    //    public tipoConta id;
 
 
         public virtual void Saca(double valor)
         {
-            if (saldo >= valor)
+            if (saldo >= valor && valor > 0)
             {
                 this.saldo -= valor;
             }
-            else if (saldo < valor)
+            else if (saldo < valor && valor > 0)
             {
-                throw new SaldoInsuficienteException();
-            }
-            else if (valor<0)
-            {
-                throw new ValorNegativoException();
+                MessageBox.Show("Saldo insuficiente para a operação solicitada");
             }
             else
             {
-                throw new ArgumentException();
+                MessageBox.Show("Insira um valor numérico positivo");
             }
 
         }
@@ -45,22 +41,18 @@ namespace Banco
 
         public virtual void Transfere(double valor, Conta destino)
         {
-            if(saldo >= valor)
+            if(saldo >= valor && valor > 0)
             {
                 this.saldo -= valor;
                 destino.saldo += valor;
             }
-            else if (saldo < valor)
+            else if (saldo < valor && valor > 0)
             {
-                throw new SaldoInsuficienteException();
-            }
-            else if (valor < 0)
-            {
-                throw new ValorNegativoException();
+                MessageBox.Show("Saldo insuficiente para a operação solicitada");
             }
             else
             {
-                throw new ArgumentException();
+                MessageBox.Show("Insira um valor numérico positivo");
             }
             this.saldo -= valor;
             destino.saldo += valor;
@@ -77,8 +69,6 @@ namespace Banco
             this.saldo -= imposto;
             return imposto;
         }
-    //    public const int id = 1;
-   //     public const string nomeTipo = "Conta Corrente";
     }
 
     public class ContaPoupanca : Conta, IRentavel
@@ -87,29 +77,23 @@ namespace Banco
         public override void Saca(double valor)
         {
             valor += 0.1;
-            if (saldo >= (valor))
+            if (saldo >= valor && valor > 0)
             {
-                this.saldo -= (valor);
+                this.saldo -= valor;
             }
-            else if (saldo < valor)
+            else if (saldo < valor && valor > 0)
             {
-                throw new SaldoInsuficienteException();
-            }
-            else if (valor < 0)
-            {
-                throw new ValorNegativoException();
+                MessageBox.Show("Saldo insuficiente para a operação solicitada");
             }
             else
             {
-                throw new ArgumentException();
+                MessageBox.Show("Insira um valor numérico positivo");
             }
         }
         double IRentavel.calculaRendimento()
         {
             return this.saldo *= 0.03;
         }
-    //    public const int id = 2;
-    //    public const string nomeTipo = "Conta Poupanca";
     }
 
     public class ContaDeInvestimentos : Conta, ITributavel, IRentavel
@@ -126,39 +110,6 @@ namespace Banco
         {
             return this.saldo * 0.09;
         }
-     //   public const tipoConta id = 3;
-      //  public const string nomeTipo = "Conta de Investimentos";
     }
 
-    public class SaldoInsuficienteException : Exception
-    {
-
-    }
-
-    public class ValorNegativoException : Exception
-    {
-
-    }
-
-    /*  public class tipoConta
-      {
-          public int id;
-          public string nomeTipo;
-
-          public void atribuiTipoConta(int id)
-          {
-              if (id==1)
-              {
-                  Conta conta = new ContaCorrente();
-              }
-              else if (id == 2)
-              {
-                  Conta conta = new ContaPoupanca();
-              }
-          }
-          public void consultaTipoConta(Conta conta)
-          {
-              if
-          }
-      }*/
 }

@@ -13,9 +13,17 @@ namespace Banco
 {
     public partial class Form1 : Form
     {
-        public List<Conta> contas;
-        
-        public Dictionary<Int32, Conta> dicionarioDeContas = new Dictionary<Int32, Conta>();
+        /* GENERICS
+         * Genéricos permitem escrever uma classe ou método que aceita qualquer tipo como parâmetro.
+         * A plataforma .NET possui diversas classes e métodos genéricos padrão nas coleções e nos métodos que operam nelas
+         * como a List<T> e o Dictionary<Tkey, TValue> utilizados logo abaixo.
+         * O tipo aceito pode ser definido na instanciação da classe/método, como nos exemplos aqui, ou deixados em aberto através de um tipo genérico, como será visto
+         * mais a seguir.
+         */
+
+        public List<Conta> contas;//Esta lista foi definida para receber objetos do tipo Conta
+
+        public Dictionary<Int32, Conta> dicionarioDeContas = new Dictionary<Int32, Conta>();//Este dicionário teve seus parâmetros de tipo definidos como Int32 para a chave e Conta para o objeto armazenado.
 
         public Form1()
         {
@@ -25,8 +33,13 @@ namespace Banco
         private void Form1_Load(object sender, EventArgs e)
         {
             this.contas = new List<Conta>();
-            
-            Conta c1 = new ContaCorrente();
+
+            /*UPCAST
+             *O upcast é a conversão de um objeto de um tipo mais específico para um tipo mais abrengente, por exemplo de subclasse para superclasse.
+             *Como o tipo mais específico faz parte e já possui as características da classe mais geral, a conversão pode ser implícita:
+             */
+            ContaCorrente cc = new ContaCorrente();
+            Conta c1 = cc;
             c1.saldo = 500;
             c1.numero = ++Conta.numeroDeContas;
             c1.titular = new Cliente("José Alvaro");
@@ -55,6 +68,16 @@ namespace Banco
             c5.numero = ++Conta.numeroDeContas;
             c5.titular = new Cliente("Alfonso Costa");
             this.AdicionaConta(c5);
+            /*Boxing
+            * Conversão de um tipo primário (Value Type) em um tipo de referência.
+            * ocorreria se por exemplo houvesse uma variável valorSaldo do tipo objeto:
+            */
+            object valorSaldo = c5.saldo; //tipo primário (double - c2.saldo) em tipo referência (object - valorSaldo)
+            //Já o UNBOXING é a conversão do tipo referência para o tipo primário, que deve ser feito de forma explícita:
+            double d = (double)valorSaldo;
+            double a = Conta.numeroDeContas;//Conversão de tipos numéricos - implícita, sem perda de dados
+            int b = (int)d;//Conversão de tipos numéricos - explícita, possível perda de dados quando não compatíveis
+            MessageBox.Show("Programa iniciado. \n Resultado do unboxing: " + d);
 
         }
 
@@ -91,8 +114,8 @@ namespace Banco
         public void AdicionaConta(Conta conta)
         {
             this.contas.Add(conta);
-            comboContas.Items.Add("titular: " + conta.titular.nome);
-            contaDestino.Items.Add("titular: " + conta.titular.nome);
+            comboContas.Items.Add("Titular: " + conta.titular.nome);
+            contaDestino.Items.Add("Titular: " + conta.titular.nome);
             dicionarioDeContas.Add(conta.numero, conta);
         }
 
@@ -108,12 +131,21 @@ namespace Banco
 
         private void realizaTransferencia_Click(object sender, EventArgs e)
         {
-            double valor = Convert.ToDouble(valorTransferencia.Text);
-            int indiceOrigem = comboContas.SelectedIndex;
-            Conta selecionada = this.contas[indiceOrigem];
-            int indiceDestino = contaDestino.SelectedIndex;
-            Conta destino = this.contas[indiceDestino];
-            this.contas[indiceOrigem].Transfere(valor, this.contas[indiceDestino]);
+            if (valorTransferencia.Text == "" || comboContas.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selecione as contas de destino e origem e o valor a transferir");
+            }
+            else
+            { 
+                double valor = Convert.ToDouble(valorTransferencia.Text);
+                int indiceOrigem = comboContas.SelectedIndex;
+                Conta selecionada = this.contas[indiceOrigem];
+                int indiceDestino = contaDestino.SelectedIndex;
+                Conta destino = this.contas[indiceDestino];
+                this.contas[indiceOrigem].Transfere(valor, this.contas[indiceDestino]);
+                mostraDados(selecionada);
+                MessageBox.Show("Transferência de {1} realizada", valor.ToString("c"));
+            }
         }
 
         private void btnCalculaImpostos_Click(object sender, EventArgs e)
@@ -127,22 +159,29 @@ namespace Banco
             else
             {
                 Conta selecionada = this.contas[indice];
-                if (selecionada is ITributavel)//ContaCorrente)
+                /*DOWNCAST
+                * É a atribuição de uma classe mais específica a partir de um objeto de uma classe superior, mais geral, ou seja
+                * a conversão de um objeto de tipo de superclasse para tipo subclasse.
+                * No exemplo a seguir é feito o downcast de um objeto do tipo Conta, superclasse, para um objeto do tipo ContaCorrente, subclasse.
+                * O downcast deve ser feito de forma explícita.
+                */
+                if (selecionada is ContaCorrente)//Na conversão de tipos o operador "is", um operador booleano, atesta se a conversão é possível retornando true ou false
                 {
-                     ContaCorrente corrente = (ContaCorrente)selecionada;
-                     double imposto = corrente.calculaTributos();
-                     MessageBox.Show("Valor do imposto: " + imposto.ToString("c"));
-                     MessageBox.Show("Saldo:  " + corrente.saldo.ToString("c"));
-                     textoSaldo.Text = corrente.saldo.ToString("c");
+                    ContaCorrente corrente = (ContaCorrente)selecionada;//DOWNCASTING - selecionada convertida de Conta para ContaCorrente
+                    double imposto = corrente.calculaTributos();
+                    MessageBox.Show("Valor do imposto: " + imposto.ToString("c"));
+                    MessageBox.Show("Saldo:  " + corrente.saldo.ToString("c"));
+                    textoSaldo.Text = corrente.saldo.ToString("c");
                  }
-                 else if (selecionada is ContaDeInvestimentos)
-                 {
-                     ContaDeInvestimentos corrente = (ContaDeInvestimentos)selecionada;
-                     double imposto = corrente.calculaTributos();
-                     MessageBox.Show("Valor do imposto: R$" + Convert.ToString(imposto));
-                     MessageBox.Show("Saldo: R$" + Convert.ToString(corrente.saldo));
-                     textoSaldo.Text = Convert.ToString(corrente.saldo);
-                 }
+                else if (selecionada is ContaDeInvestimentos)
+                {
+                    ContaDeInvestimentos corrente = (ContaDeInvestimentos)selecionada;//DOWNCASTING - selecionada convertida de Conta para ContaDeInvestimentos
+                    double imposto = corrente.calculaTributos();
+                    //Outra forma de conversão de tipos é o uso de métodos padrão fornecidos pela plataforma .NET como o .ToString()...
+                    MessageBox.Show("Valor do imposto: R$" + imposto.ToString());
+                    MessageBox.Show("Saldo: R$" + Convert.ToString(corrente.saldo));// que também pode ser invocado encapsulando a variável ou o objeto a ser convertido pela classe Convert...
+                    textoSaldo.Text = Convert.ToString(corrente.saldo);
+                }
                 else
                 {
                     MessageBox.Show("Conta isenta de impostos");
@@ -152,9 +191,9 @@ namespace Banco
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Conta busca = dicionarioDeContas[Convert.ToInt32(valorBuscaConta.Text)];
+            Conta busca = dicionarioDeContas[Convert.ToInt32(valorBuscaConta.Text)];// e o Convert.ToInt32(), dentre vários outros tipos suportados pela Classe Convert e seus métodos;
             mostraDados(busca);
-            comboContas.SelectedItem = null;
+            
         }
 
 

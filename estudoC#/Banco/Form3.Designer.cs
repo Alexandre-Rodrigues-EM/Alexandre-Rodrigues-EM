@@ -30,8 +30,6 @@ namespace Banco
         private void InitializeComponent()
         {
             this.btnGeraRelatorioGeral = new System.Windows.Forms.Button();
-            this.btnGeraRelatorioDeImpostos = new System.Windows.Forms.Button();
-            this.btnGeraRelatorioDeTrasacoes = new System.Windows.Forms.Button();
             this.btnImprimeRelatorio = new System.Windows.Forms.Button();
             this.telaRelatorio = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -72,24 +70,6 @@ namespace Banco
             this.btnGeraRelatorioGeral.UseVisualStyleBackColor = true;
             this.btnGeraRelatorioGeral.Click += new System.EventHandler(this.btnGeraRelatorioGeral_Click);
             // 
-            // btnGeraRelatorioDeImpostos
-            // 
-            this.btnGeraRelatorioDeImpostos.Location = new System.Drawing.Point(93, 432);
-            this.btnGeraRelatorioDeImpostos.Name = "btnGeraRelatorioDeImpostos";
-            this.btnGeraRelatorioDeImpostos.Size = new System.Drawing.Size(75, 23);
-            this.btnGeraRelatorioDeImpostos.TabIndex = 2;
-            this.btnGeraRelatorioDeImpostos.Text = "Impostos";
-            this.btnGeraRelatorioDeImpostos.UseVisualStyleBackColor = true;
-            // 
-            // btnGeraRelatorioDeTrasacoes
-            // 
-            this.btnGeraRelatorioDeTrasacoes.Location = new System.Drawing.Point(174, 432);
-            this.btnGeraRelatorioDeTrasacoes.Name = "btnGeraRelatorioDeTrasacoes";
-            this.btnGeraRelatorioDeTrasacoes.Size = new System.Drawing.Size(75, 23);
-            this.btnGeraRelatorioDeTrasacoes.TabIndex = 3;
-            this.btnGeraRelatorioDeTrasacoes.Text = "Transações";
-            this.btnGeraRelatorioDeTrasacoes.UseVisualStyleBackColor = true;
-            // 
             // btnImprimeRelatorio
             // 
             this.btnImprimeRelatorio.Location = new System.Drawing.Point(368, 432);
@@ -98,6 +78,7 @@ namespace Banco
             this.btnImprimeRelatorio.TabIndex = 4;
             this.btnImprimeRelatorio.Text = "Gerar Arquivo";
             this.btnImprimeRelatorio.UseVisualStyleBackColor = true;
+            this.btnImprimeRelatorio.Click += new System.EventHandler(this.btnImprimeRelatorio_Click);
             // 
             // telaRelatorio
             // 
@@ -356,8 +337,6 @@ namespace Banco
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.telaRelatorio);
             this.Controls.Add(this.btnImprimeRelatorio);
-            this.Controls.Add(this.btnGeraRelatorioDeTrasacoes);
-            this.Controls.Add(this.btnGeraRelatorioDeImpostos);
             this.Controls.Add(this.btnGeraRelatorioGeral);
             this.Name = "Form3";
             this.Text = "Form3";
@@ -371,8 +350,6 @@ namespace Banco
 
         #endregion
         private System.Windows.Forms.Button btnGeraRelatorioGeral;
-        private System.Windows.Forms.Button btnGeraRelatorioDeImpostos;
-        private System.Windows.Forms.Button btnGeraRelatorioDeTrasacoes;
         private System.Windows.Forms.Button btnImprimeRelatorio;
         private System.Windows.Forms.ListBox telaRelatorio;
         private System.Windows.Forms.GroupBox groupBox1;
