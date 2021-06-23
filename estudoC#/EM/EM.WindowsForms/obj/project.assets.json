@@ -1,0 +1,115 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0-windows7.0": {
+      "EM.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/EM.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EM.Domain.dll": {}
+        }
+      },
+      "EM.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "EM.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EM.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EM.Repository.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EM.Domain/1.0.0": {
+      "type": "project",
+      "path": "../EM.Domain/EM.Domain.csproj",
+      "msbuildProject": "../EM.Domain/EM.Domain.csproj"
+    },
+    "EM.Repository/1.0.0": {
+      "type": "project",
+      "path": "../EM.Repository/EM.Repository.csproj",
+      "msbuildProject": "../EM.Repository/EM.Repository.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0-windows7.0": [
+      "EM.Domain >= 1.0.0",
+      "EM.Repository >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.WindowsForms\\EM.WindowsForms.csproj",
+      "projectName": "EM.WindowsForms",
+      "projectPath": "C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.WindowsForms\\EM.WindowsForms.csproj",
+      "packagesPath": "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.WindowsForms\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Alexandre - Estagio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0-windows7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "projectReferences": {
+            "C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.Domain\\EM.Domain.csproj": {
+              "projectPath": "C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.Domain\\EM.Domain.csproj"
+            },
+            "C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.Repository\\EM.Repository.csproj": {
+              "projectPath": "C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.Repository\\EM.Repository.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0-windows7.0": {
+        "targetAlias": "net5.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\bin\Debug\net5.0\EM.Domain.exe
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\bin\Debug\net5.0\EM.Domain.deps.json
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\bin\Debug\net5.0\EM.Domain.runtimeconfig.json
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\bin\Debug\net5.0\EM.Domain.runtimeconfig.dev.json
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\bin\Debug\net5.0\EM.Domain.dll
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\bin\Debug\net5.0\ref\EM.Domain.dll
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\bin\Debug\net5.0\EM.Domain.pdb
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\obj\Debug\net5.0\EM.Domain.csproj.AssemblyReference.cache
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\obj\Debug\net5.0\EM.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\obj\Debug\net5.0\EM.Domain.AssemblyInfoInputs.cache
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\obj\Debug\net5.0\EM.Domain.AssemblyInfo.cs
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\obj\Debug\net5.0\EM.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\obj\Debug\net5.0\EM.Domain.dll
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\obj\Debug\net5.0\ref\EM.Domain.dll
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\obj\Debug\net5.0\EM.Domain.pdb
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\obj\Debug\net5.0\EM.Domain.genruntimeconfig.cache

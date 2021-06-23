@@ -14,8 +14,17 @@ namespace Banco
 {
     public partial class Form3 : Form
     {
+        /* GENERICS
+         * Genéricos permitem escrever uma classe ou método que aceita qualquer tipo como parâmetro.
+         * A plataforma .NET possui diversas classes e métodos genéricos padrão nas coleções e nos métodos que operam nelas
+         * como a List<T>, utilizada logo abaixo, e o Dictionary<Tkey, TValue> utilizado no Form1.
+         * O tipo aceito pode ser definido na instanciação da classe/método, como nos exemplos aqui, ou deixados em aberto através de um tipo genérico, como será visto
+         * mais a seguir.
+         */
+
         List<Conta> contas = new List<Conta>();
         List<Conta> contasFiltradas = new List<Conta>();
+        //Estas listas foram definidas para receber objetos do tipo Conta
         int numeroDoRelatorio = 0;
 
         public Form3(List<Conta> contas)
@@ -244,7 +253,7 @@ namespace Banco
         private void btnImprimeRelatorio_Click(object sender, EventArgs e)
         {
 
-            string relatorio = $"relatoriodecontas-{numeroDoRelatorio}.txt";
+            string relatorio = @$"C:\Users\Alexandre - Estagio\Desktop\relatoriodecontas-{numeroDoRelatorio}.txt";
             Stream saida = new FileStream (relatorio, FileMode.OpenOrCreate);
             StreamWriter escritor = new StreamWriter(saida);
             if (selecionaTipoDeConta.SelectedIndex == -1)
@@ -272,7 +281,7 @@ namespace Banco
             }
             escritor.Close();
             saida.Close();
-            MessageBox.Show("Relatório gerado na pasta raíz");
+            MessageBox.Show("Relatório gerado na área de trabalho");
 
 
         }

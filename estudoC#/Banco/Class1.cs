@@ -13,6 +13,7 @@ namespace Banco
         public int numero;
         public static int numeroDeContas;
         public static string[] tiposDeConta = new string[] { "Conta Poupança", "Conta Corrente", "Conta de Investimentos" };
+        //public enum tiposDeConta { ContaPoupança, ContaCorrente, ContadeInvestimentos };
         public Cliente titular;
         public double saldo;
 

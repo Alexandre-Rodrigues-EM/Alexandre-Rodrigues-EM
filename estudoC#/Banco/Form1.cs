@@ -13,15 +13,8 @@ namespace Banco
 {
     public partial class Form1 : Form
     {
-        /* GENERICS
-         * Genéricos permitem escrever uma classe ou método que aceita qualquer tipo como parâmetro.
-         * A plataforma .NET possui diversas classes e métodos genéricos padrão nas coleções e nos métodos que operam nelas
-         * como a List<T> e o Dictionary<Tkey, TValue> utilizados logo abaixo.
-         * O tipo aceito pode ser definido na instanciação da classe/método, como nos exemplos aqui, ou deixados em aberto através de um tipo genérico, como será visto
-         * mais a seguir.
-         */
 
-        public List<Conta> contas;//Esta lista foi definida para receber objetos do tipo Conta
+        public List<Conta> contas;
 
         public Dictionary<Int32, Conta> dicionarioDeContas = new Dictionary<Int32, Conta>();//Este dicionário teve seus parâmetros de tipo definidos como Int32 para a chave e Conta para o objeto armazenado.
 
@@ -70,9 +63,10 @@ namespace Banco
             this.AdicionaConta(c5);
             /*Boxing
             * Conversão de um tipo primário (Value Type) em um tipo de referência.
-            * ocorreria se por exemplo houvesse uma variável valorSaldo do tipo objeto:
+            * ocorreria se, por exemplo, houvesse uma variável valorSaldo do tipo objeto:
             */
             object valorSaldo = c5.saldo; //tipo primário (double - c2.saldo) em tipo referência (object - valorSaldo)
+            
             //Já o UNBOXING é a conversão do tipo referência para o tipo primário, que deve ser feito de forma explícita:
             double d = (double)valorSaldo;
             double a = Conta.numeroDeContas;//Conversão de tipos numéricos - implícita, sem perda de dados
