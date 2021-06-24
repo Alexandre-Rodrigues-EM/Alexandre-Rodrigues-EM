@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\EM.Domain\EM.Domain.csproj" />
     <ProjectReference Include="..\EM.Repository\EM.Repository.csproj" />
   </ItemGroup>

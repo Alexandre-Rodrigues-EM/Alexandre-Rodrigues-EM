@@ -7,14 +7,41 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "EM.WindowsForms/1.0.0": {
+        "dependencies": {
+          "EM.Domain": "1.0.0",
+          "EM.Repository": "1.0.0"
+        },
         "runtime": {
           "EM.WindowsForms.dll": {}
+        }
+      },
+      "EM.Domain/1.0.0": {
+        "runtime": {
+          "EM.Domain.dll": {}
+        }
+      },
+      "EM.Repository/1.0.0": {
+        "dependencies": {
+          "EM.Domain": "1.0.0"
+        },
+        "runtime": {
+          "EM.Repository.dll": {}
         }
       }
     }
   },
   "libraries": {
     "EM.WindowsForms/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EM.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EM.Repository/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

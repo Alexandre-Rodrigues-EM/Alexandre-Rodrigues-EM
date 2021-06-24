@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM.Domain", "EM.Domain\EM.Domain.csproj", "{6CFD1763-AA29-4366-A53C-5FCB8F599C45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EM.Domain", "EM.Domain\EM.Domain.csproj", "{6CFD1763-AA29-4366-A53C-5FCB8F599C45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM.Repository", "EM.Repository\EM.Repository.csproj", "{E2D43DC1-EC3B-41CA-967B-73A6CAD3F53E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EM.Repository", "EM.Repository\EM.Repository.csproj", "{E2D43DC1-EC3B-41CA-967B-73A6CAD3F53E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM.WindowsForms", "EM.WindowsForms\EM.WindowsForms.csproj", "{18C3067C-DA6E-4FD6-8B43-EE2F89B5B9CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EM.WindowsForms", "EM.WindowsForms\EM.WindowsForms.csproj", "{18C3067C-DA6E-4FD6-8B43-EE2F89B5B9CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM.Domain.Teste", "EM.Domain.Teste\EM.Domain.Teste.csproj", "{25AAB411-0F17-4034-B340-531241DC8EFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM.Repository.Teste", "EM.Repository.Teste\EM.Repository.Teste.csproj", "{58E253BC-7C56-4E56-88BB-8D79D5B50805}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{18C3067C-DA6E-4FD6-8B43-EE2F89B5B9CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18C3067C-DA6E-4FD6-8B43-EE2F89B5B9CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18C3067C-DA6E-4FD6-8B43-EE2F89B5B9CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25AAB411-0F17-4034-B340-531241DC8EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25AAB411-0F17-4034-B340-531241DC8EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25AAB411-0F17-4034-B340-531241DC8EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25AAB411-0F17-4034-B340-531241DC8EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58E253BC-7C56-4E56-88BB-8D79D5B50805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E253BC-7C56-4E56-88BB-8D79D5B50805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E253BC-7C56-4E56-88BB-8D79D5B50805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E253BC-7C56-4E56-88BB-8D79D5B50805}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

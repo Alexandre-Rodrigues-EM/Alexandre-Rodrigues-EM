@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "EM.Repository/1.0.0": {
+        "dependencies": {
+          "EM.Domain": "1.0.0"
+        },
+        "runtime": {
+          "EM.Repository.dll": {}
+        }
+      },
+      "EM.Domain/1.0.0": {
+        "runtime": {
+          "EM.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EM.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EM.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

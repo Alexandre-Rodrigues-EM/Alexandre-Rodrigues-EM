@@ -1,0 +1,35 @@
+{
+	"folders": {},
+	"connections": {
+		"jaybird-17a3dfd138e-43843443b4ce33aa": {
+			"provider": "jaybird",
+			"driver": "jaybird",
+			"name": "EM.FDB",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3050",
+				"database": "C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.db\\EM.FDB",
+				"url": "jdbc:firebirdsql://localhost:3050/C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.db\\EM.FDB",
+				"type": "dev",
+				"properties": {
+					"encoding": "UTF8"
+				},
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false
+		}
+	}
+}

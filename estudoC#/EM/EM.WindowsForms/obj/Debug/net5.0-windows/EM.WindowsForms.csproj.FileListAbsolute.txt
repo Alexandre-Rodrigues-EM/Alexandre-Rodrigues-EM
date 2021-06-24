@@ -16,3 +16,16 @@ C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Win
 C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\obj\Debug\net5.0-windows\ref\EM.WindowsForms.dll
 C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\obj\Debug\net5.0-windows\EM.WindowsForms.pdb
 C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\obj\Debug\net5.0-windows\EM.WindowsForms.genruntimeconfig.cache
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Domain.deps.json
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Domain.runtimeconfig.json
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Domain.runtimeconfig.dev.json
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Domain.exe
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Repository.deps.json
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Repository.runtimeconfig.json
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Repository.runtimeconfig.dev.json
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Repository.exe
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Domain.dll
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Repository.dll
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Domain.pdb
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Repository.pdb
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\obj\Debug\net5.0-windows\EM.WindowsForms.csproj.CopyComplete

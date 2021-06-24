@@ -27,7 +27,8 @@ namespace EM.WidowsForms
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            EnumeradorSexo.ForEach(x => selecionaSexo.Items.Add(x));
+            foreach(EnumeradorSexo sexo in Enum.GetValues(typeof(EnumeradorSexo)))
+                selecionaSexo.Items.Add(sexo);
 
         }
 
@@ -59,6 +60,12 @@ namespace EM.WidowsForms
         private void insereNumeroMatricula_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void botaoAdicionar_Click(object sender, EventArgs e)
+        {
+            var dataNascimento = insereDataDeNascimento.Text;
+            MessageBox.Show(dataNascimento);
         }
     }
 }

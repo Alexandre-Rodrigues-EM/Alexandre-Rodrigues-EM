@@ -65,19 +65,22 @@ namespace EM.WidowsForms
             this.groupBox1.Controls.Add(this.insereNome);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(14, 13);
+            this.groupBox1.Location = new System.Drawing.Point(16, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(517, 126);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.Size = new System.Drawing.Size(603, 145);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Novo aluno / Editando aluno";
             // 
             // insereCPF
             // 
-            this.insereCPF.Location = new System.Drawing.Point(233, 92);
+            this.insereCPF.Location = new System.Drawing.Point(272, 106);
+            this.insereCPF.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.insereCPF.MaxLength = 11;
             this.insereCPF.Name = "insereCPF";
-            this.insereCPF.Size = new System.Drawing.Size(113, 20);
+            this.insereCPF.Size = new System.Drawing.Size(131, 23);
             this.insereCPF.TabIndex = 13;
             this.insereCPF.MouseClick += new System.Windows.Forms.MouseEventHandler(this.insereCPF_MouseClick);
             this.insereCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.insereCPF_KeyPress);
@@ -85,10 +88,11 @@ namespace EM.WidowsForms
             // insereNumeroMatricula
             // 
             this.insereNumeroMatricula.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.insereNumeroMatricula.Location = new System.Drawing.Point(12, 48);
+            this.insereNumeroMatricula.Location = new System.Drawing.Point(14, 55);
+            this.insereNumeroMatricula.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.insereNumeroMatricula.MaxLength = 9;
             this.insereNumeroMatricula.Name = "insereNumeroMatricula";
-            this.insereNumeroMatricula.Size = new System.Drawing.Size(100, 20);
+            this.insereNumeroMatricula.Size = new System.Drawing.Size(116, 23);
             this.insereNumeroMatricula.TabIndex = 12;
             this.insereNumeroMatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.insereNumeroMatricula.MouseClick += new System.Windows.Forms.MouseEventHandler(this.insereNumeroMatricula_MouseClick);
@@ -97,18 +101,21 @@ namespace EM.WidowsForms
             // 
             // botaoAdicionar
             // 
-            this.botaoAdicionar.Location = new System.Drawing.Point(434, 89);
+            this.botaoAdicionar.Location = new System.Drawing.Point(506, 103);
+            this.botaoAdicionar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.botaoAdicionar.Name = "botaoAdicionar";
-            this.botaoAdicionar.Size = new System.Drawing.Size(75, 23);
+            this.botaoAdicionar.Size = new System.Drawing.Size(88, 27);
             this.botaoAdicionar.TabIndex = 11;
             this.botaoAdicionar.Text = "Adicionar";
             this.botaoAdicionar.UseVisualStyleBackColor = true;
+            this.botaoAdicionar.Click += new System.EventHandler(this.botaoAdicionar_Click);
             // 
             // botaoLimpar
             // 
-            this.botaoLimpar.Location = new System.Drawing.Point(353, 90);
+            this.botaoLimpar.Location = new System.Drawing.Point(412, 104);
+            this.botaoLimpar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.botaoLimpar.Name = "botaoLimpar";
-            this.botaoLimpar.Size = new System.Drawing.Size(75, 23);
+            this.botaoLimpar.Size = new System.Drawing.Size(88, 27);
             this.botaoLimpar.TabIndex = 10;
             this.botaoLimpar.Text = "Limpar";
             this.botaoLimpar.UseVisualStyleBackColor = true;
@@ -117,18 +124,20 @@ namespace EM.WidowsForms
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(230, 75);
+            this.label5.Location = new System.Drawing.Point(268, 87);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 13);
+            this.label5.Size = new System.Drawing.Size(28, 15);
             this.label5.TabIndex = 9;
             this.label5.Text = "CPF";
             // 
             // insereDataDeNascimento
             // 
-            this.insereDataDeNascimento.Location = new System.Drawing.Point(127, 92);
+            this.insereDataDeNascimento.Location = new System.Drawing.Point(148, 106);
+            this.insereDataDeNascimento.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.insereDataDeNascimento.Mask = "00/00/0000";
             this.insereDataDeNascimento.Name = "insereDataDeNascimento";
-            this.insereDataDeNascimento.Size = new System.Drawing.Size(100, 20);
+            this.insereDataDeNascimento.Size = new System.Drawing.Size(116, 23);
             this.insereDataDeNascimento.TabIndex = 7;
             this.insereDataDeNascimento.ValidatingType = typeof(System.DateTime);
             this.insereDataDeNascimento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.insereDataDeNascimento_MouseClick);
@@ -136,9 +145,10 @@ namespace EM.WidowsForms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(124, 76);
+            this.label4.Location = new System.Drawing.Point(145, 88);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(71, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "Nascimento";
             // 
@@ -146,57 +156,64 @@ namespace EM.WidowsForms
             // 
             this.selecionaSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.selecionaSexo.FormattingEnabled = true;
-            this.selecionaSexo.Location = new System.Drawing.Point(12, 92);
+            this.selecionaSexo.Location = new System.Drawing.Point(14, 106);
+            this.selecionaSexo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.selecionaSexo.Name = "selecionaSexo";
-            this.selecionaSexo.Size = new System.Drawing.Size(109, 21);
+            this.selecionaSexo.Size = new System.Drawing.Size(126, 23);
             this.selecionaSexo.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 75);
+            this.label3.Location = new System.Drawing.Point(10, 87);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.Size = new System.Drawing.Size(32, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Sexo";
             // 
             // insereNome
             // 
-            this.insereNome.Location = new System.Drawing.Point(163, 48);
+            this.insereNome.Location = new System.Drawing.Point(190, 55);
+            this.insereNome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.insereNome.Name = "insereNome";
-            this.insereNome.Size = new System.Drawing.Size(346, 20);
+            this.insereNome.Size = new System.Drawing.Size(403, 23);
             this.insereNome.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(164, 32);
+            this.label2.Location = new System.Drawing.Point(191, 37);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(40, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nome";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 32);
+            this.label1.Location = new System.Drawing.Point(7, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(57, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Matrícula";
             // 
             // barraDePesquisa
             // 
-            this.barraDePesquisa.Location = new System.Drawing.Point(14, 146);
+            this.barraDePesquisa.Location = new System.Drawing.Point(16, 168);
+            this.barraDePesquisa.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.barraDePesquisa.Name = "barraDePesquisa";
-            this.barraDePesquisa.Size = new System.Drawing.Size(427, 20);
+            this.barraDePesquisa.Size = new System.Drawing.Size(497, 23);
             this.barraDePesquisa.TabIndex = 1;
             // 
             // botaoPesquisar
             // 
-            this.botaoPesquisar.Location = new System.Drawing.Point(456, 145);
+            this.botaoPesquisar.Location = new System.Drawing.Point(532, 167);
+            this.botaoPesquisar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.botaoPesquisar.Name = "botaoPesquisar";
-            this.botaoPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.botaoPesquisar.Size = new System.Drawing.Size(88, 27);
             this.botaoPesquisar.TabIndex = 2;
             this.botaoPesquisar.Text = "Pesquisar";
             this.botaoPesquisar.UseVisualStyleBackColor = true;
@@ -204,42 +221,46 @@ namespace EM.WidowsForms
             // dataGrid
             // 
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(13, 173);
+            this.dataGrid.Location = new System.Drawing.Point(15, 200);
+            this.dataGrid.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(518, 150);
+            this.dataGrid.Size = new System.Drawing.Size(604, 173);
             this.dataGrid.TabIndex = 3;
             // 
             // botaoExcluir
             // 
-            this.botaoExcluir.Location = new System.Drawing.Point(456, 329);
+            this.botaoExcluir.Location = new System.Drawing.Point(532, 380);
+            this.botaoExcluir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.botaoExcluir.Name = "botaoExcluir";
-            this.botaoExcluir.Size = new System.Drawing.Size(75, 23);
+            this.botaoExcluir.Size = new System.Drawing.Size(88, 27);
             this.botaoExcluir.TabIndex = 4;
             this.botaoExcluir.Text = "Excluir";
             this.botaoExcluir.UseVisualStyleBackColor = true;
             // 
             // botaoEditar
             // 
-            this.botaoEditar.Location = new System.Drawing.Point(375, 329);
+            this.botaoEditar.Location = new System.Drawing.Point(438, 380);
+            this.botaoEditar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.botaoEditar.Name = "botaoEditar";
-            this.botaoEditar.Size = new System.Drawing.Size(75, 23);
+            this.botaoEditar.Size = new System.Drawing.Size(88, 27);
             this.botaoEditar.TabIndex = 5;
             this.botaoEditar.Text = "Editar";
             this.botaoEditar.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 364);
+            this.ClientSize = new System.Drawing.Size(637, 420);
             this.Controls.Add(this.botaoEditar);
             this.Controls.Add(this.botaoExcluir);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.botaoPesquisar);
             this.Controls.Add(this.barraDePesquisa);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Cadastro de Alunos";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

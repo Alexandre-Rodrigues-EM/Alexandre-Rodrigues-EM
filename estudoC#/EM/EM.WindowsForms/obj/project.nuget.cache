@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gHihjW1jq0DWYp5s5Qa5R9W4Qi4R7uJ4EWJs75TshJmW9edsKROYmYHZldUnzOOY6ZLTfG9YkEmCmZuow00f4g==",
+  "dgSpecHash": "SxlD5BtXx6dbEBHLre6nn28W1sM1S1++jofUmUWP5AdM4X2EH29Ox5qc7ctjaGAJkipSJ2EOVnRnHVD9tNFXjQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.WindowsForms\\EM.WindowsForms.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\firebirdsql.data.firebirdclient\\8.0.1\\firebirdsql.data.firebirdclient.8.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WILuNGmyMC0pOsWjj4atd7plzH/0LJUyzCOrdtsats5yBMSq7lvvi5TQRoyP9k/MIRws5TZevwR98bYD66lOyQ==",
+  "dgSpecHash": "sKghe+xMVIQtC/INAVS+e2cEesfrXCwEOTcmk74Lp89lVNgRTVhdSr0ad6/X1BxQpHu9BI2oUIzp5/oTGt5E/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.Domain\\EM.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\firebirdsql.data.firebirdclient\\8.0.1\\firebirdsql.data.firebirdclient.8.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
