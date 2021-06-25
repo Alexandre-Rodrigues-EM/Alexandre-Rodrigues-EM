@@ -21,13 +21,18 @@ namespace EM.Repository
         public void Update(T objeto) 
         { }
 
-        public void GetAll() 
-        { }
+        public IEnumerable<T> GetAll() 
+        {
+            private IEnumerator<T> GetEnumerator()
+            {
+                return new GetAll();
+
+            }
+        }
 
         public void Get() 
         { }
-
-        //RepositorioAbstrato<Aluno> RepositorioAluno = new RepositorioAbstrato<Aluno>();
+    
     }
 
     public class RepositorioAluno : RepositorioAbstrato<Aluno>
@@ -41,7 +46,7 @@ namespace EM.Repository
 
         public IEnumerable<Aluno> GetByContendoNoNome(string parteDoNome)
         {
-
+            public void Enumerador 
         }
     }
 }

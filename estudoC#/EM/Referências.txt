@@ -1,0 +1,25 @@
+https://refactoring.guru/pt-br
+https://www.dofactory.com/net/design-patterns
+https://www.eduardopires.net.br/2013/04/orientacao-a-objeto-solid/
+https://www.venturus.org.br/o-que-e-solid/
+http://www.facom.ufu.br/~bacala/ESOF/05a-Padr%C3%B5es%20GRASP.pdf
+https://edisciplinas.usp.br/pluginfile.php/2186358/mod_resource/content/1/Aula09_GRASP.pdf
+http://www2.ic.uff.br/~leomurta/courses/2009.1/es1/aula12.pdf
+http://www.dsc.ufcg.edu.br/~jacques/cursos/apoo/html/proj1/proj5.htm
+https://www.ic.unicamp.br/~ariadne/mc436/1s2017/Lar16GRASP.pdf
+
+http://www.macoratti.net/18/04/c_extmet1.htm
+https://gabrielschade.github.io/2018/02/05/extension-methods.html
+Delegates
+http://www.macoratti.net/11/05/c_dlg1.htm
+https://medium.com/@alexandre.malavasi/delegates-em-c-o-que-s%C3%A3o-o-que-comem-onde-vivem-e-pra-que-serv-12b5336f3d9a
+Refatoração
+https://refactoring.guru/pt-br
+Padrões de Projeto
+https://www.dofactory.com/net/design-patterns
+https://www.treinaweb.com.br/blog/para-que-servem-os-metodos-tostring-equals-e-gethashcode
+https://mari-azevedo.medium.com/princ%C3%ADpios-s-o-l-i-d-o-que-s%C3%A3o-e-porque-projetos-devem-utiliz%C3%A1-los-bf496b82b299
+https://www.ic.unicamp.br/~ariadne/mc436/1s2017/Lar16GRASP.pdf
+http://www.macoratti.net/19/03/c_funcpure1.htm
+http://www.macoratti.net/19/10/c_funcex1.htm
+http://www.macoratti.net/16/04/net_dry1.htm

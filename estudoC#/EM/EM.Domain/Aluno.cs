@@ -9,24 +9,28 @@ namespace EM.Domain
     public class Aluno : IEntidade
     {
         public int Matricula;
-        public string Nome;
+        public string Nome; 
         public string CPF;
         public DateTime Nascimento;
         public EnumeradorSexo Sexo;
 
-        public bool Equals()
+        public override bool Equals(object obj)
         {
-            return false;
+            return obj is Aluno aluno &&
+                   Matricula == aluno.Matricula &&
+                   Nome == aluno.Nome;
         }
 
-        public int GetHashcode()
+        public override int GetHashCode()
         {
-            return 0;
+            return HashCode.Combine(Matricula, Nome);
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            return "";
+            string codigoHash = Convert.ToString(this.GetHashCode());
+            return codigoHash;
         }
+
     }
 }

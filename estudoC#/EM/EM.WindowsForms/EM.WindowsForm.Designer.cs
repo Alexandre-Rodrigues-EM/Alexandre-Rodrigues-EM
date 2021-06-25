@@ -174,7 +174,7 @@ namespace EM.WidowsForms
             // 
             // insereNome
             // 
-            this.insereNome.Location = new System.Drawing.Point(190, 55);
+            this.insereNome.Location = new System.Drawing.Point(191, 55);
             this.insereNome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.insereNome.Name = "insereNome";
             this.insereNome.Size = new System.Drawing.Size(403, 23);
