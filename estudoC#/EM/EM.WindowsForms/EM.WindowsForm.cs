@@ -63,7 +63,7 @@ namespace EM.WidowsForms
 
         private void botaoAdicionar_Click(object sender, EventArgs e)
         {
-            Aluno aluno = new Aluno()
+        /*    Aluno aluno = new Aluno()
             {
                 CPF = insereCPF.Text,
                 Nascimento = Convert.ToDateTime(insereDataDeNascimento.Text),
@@ -73,6 +73,12 @@ namespace EM.WidowsForms
             };
 
             AcessoFireBird.InserirDados(aluno);
+        */
+        }
+
+        private void fbConnection1_InfoMessage(object sender, FirebirdSql.Data.FirebirdClient.FbInfoMessageEventArgs e)
+        {
+            
         }
     }
 }

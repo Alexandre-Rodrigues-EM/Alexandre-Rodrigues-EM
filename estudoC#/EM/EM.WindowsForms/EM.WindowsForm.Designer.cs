@@ -29,6 +29,7 @@ namespace EM.WidowsForms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.insereCPF = new System.Windows.Forms.TextBox();
             this.insereNumeroMatricula = new System.Windows.Forms.TextBox();
@@ -47,8 +48,10 @@ namespace EM.WidowsForms
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.botaoExcluir = new System.Windows.Forms.Button();
             this.botaoEditar = new System.Windows.Forms.Button();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -110,7 +113,7 @@ namespace EM.WidowsForms
             this.botaoAdicionar.UseVisualStyleBackColor = true;
             this.botaoAdicionar.Click += new System.EventHandler(this.botaoAdicionar_Click);
             // 
-            // 
+            // botaoLimpar
             // 
             this.botaoLimpar.Location = new System.Drawing.Point(412, 104);
             this.botaoLimpar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -247,6 +250,10 @@ namespace EM.WidowsForms
             this.botaoEditar.Text = "Editar";
             this.botaoEditar.UseVisualStyleBackColor = true;
             // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = this.botaoPesquisar.Controls;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -265,6 +272,7 @@ namespace EM.WidowsForms
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,6 +298,7 @@ namespace EM.WidowsForms
         private System.Windows.Forms.Button botaoEditar;
         private System.Windows.Forms.TextBox insereNumeroMatricula;
         private System.Windows.Forms.TextBox insereCPF;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
 
