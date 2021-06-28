@@ -8,8 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EM.Domain;
-
-
+using EM.Repository;
 
 namespace EM.WidowsForms
 {
@@ -20,7 +19,7 @@ namespace EM.WidowsForms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void botaoLimpar_Click(object sender, EventArgs e)
         {
 
         }
@@ -64,8 +63,16 @@ namespace EM.WidowsForms
 
         private void botaoAdicionar_Click(object sender, EventArgs e)
         {
-            var dataNascimento = insereDataDeNascimento.Text;
-            MessageBox.Show(dataNascimento);
+            Aluno aluno = new Aluno()
+            {
+                CPF = insereCPF.Text,
+                Nascimento = Convert.ToDateTime(insereDataDeNascimento.Text),
+                Nome = insereNome.Text,
+                Matricula = Convert.ToInt32(insereNumeroMatricula.Text),
+                Sexo = (EnumeradorSexo)selecionaSexo.SelectedItem
+            };
+
+            AcessoFireBird.InserirDados(aluno);
         }
     }
 }

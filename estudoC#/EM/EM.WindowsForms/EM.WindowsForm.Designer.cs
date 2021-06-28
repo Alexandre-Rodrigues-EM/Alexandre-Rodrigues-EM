@@ -110,7 +110,7 @@ namespace EM.WidowsForms
             this.botaoAdicionar.UseVisualStyleBackColor = true;
             this.botaoAdicionar.Click += new System.EventHandler(this.botaoAdicionar_Click);
             // 
-            // botaoLimpar
+            // 
             // 
             this.botaoLimpar.Location = new System.Drawing.Point(412, 104);
             this.botaoLimpar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -119,7 +119,7 @@ namespace EM.WidowsForms
             this.botaoLimpar.TabIndex = 10;
             this.botaoLimpar.Text = "Limpar";
             this.botaoLimpar.UseVisualStyleBackColor = true;
-            this.botaoLimpar.Click += new System.EventHandler(this.button1_Click);
+            this.botaoLimpar.Click += new System.EventHandler(this.botaoLimpar_Click);
             // 
             // label5
             // 

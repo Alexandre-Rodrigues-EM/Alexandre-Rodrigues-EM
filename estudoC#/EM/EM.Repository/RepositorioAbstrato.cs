@@ -1,7 +1,9 @@
 ﻿using EM.Domain;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,18 +23,23 @@ namespace EM.Repository
         public void Update(T objeto) 
         { }
 
+        /*
         public IEnumerable<T> GetAll() 
         {
-            private IEnumerator<T> GetEnumerator()
+            DataTable tabelaDeTudo = new DataTable();
+            tabelaDeTudo = AcessoFireBird.FireBird_GetDados();
+            List<T> ListaTudo = new List<T>;
+
+            var itemsDaTabela = tabelaDeTudo.AsEnumerable().Select(linha =>
             {
-                return new GetAll();
-
-            }
+                Matricula = linha.Field<T>("MATRICULA"),
+                Nome = linha.Field<T>("NOME")
+            }).ToList();
         }
-
-        public void Get() 
+        
+        public IEnumerable<T> Get(predicate:Expression<Func<T,bool>>) 
         { }
-    
+    */
     }
 
     public class RepositorioAluno : RepositorioAbstrato<Aluno>
@@ -43,10 +50,12 @@ namespace EM.Repository
 
             return aluno;
         }
-
+      /*  
         public IEnumerable<Aluno> GetByContendoNoNome(string parteDoNome)
         {
-            public void Enumerador 
+            List<Aluno> ListaNomesCorrespondentes = new List<Aluno>;
+            BancoDeDados.Get()
         }
+      */
     }
 }

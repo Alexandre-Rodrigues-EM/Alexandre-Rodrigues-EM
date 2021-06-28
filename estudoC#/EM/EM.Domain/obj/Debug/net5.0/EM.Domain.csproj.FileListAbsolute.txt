@@ -14,3 +14,5 @@ C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Dom
 C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\obj\Debug\net5.0\ref\EM.Domain.dll
 C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\obj\Debug\net5.0\EM.Domain.pdb
 C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\obj\Debug\net5.0\EM.Domain.genruntimeconfig.cache
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\bin\Debug\net5.0\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Domain\obj\Debug\net5.0\EM.Domain.csproj.CopyComplete

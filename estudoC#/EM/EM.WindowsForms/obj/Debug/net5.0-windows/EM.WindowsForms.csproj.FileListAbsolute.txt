@@ -29,3 +29,5 @@ C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.Win
 C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Domain.pdb
 C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Repository.pdb
 C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\obj\Debug\net5.0-windows\EM.WindowsForms.csproj.CopyComplete
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.WindowsForms\bin\Debug\net5.0-windows\EM.Repository.dll.config
