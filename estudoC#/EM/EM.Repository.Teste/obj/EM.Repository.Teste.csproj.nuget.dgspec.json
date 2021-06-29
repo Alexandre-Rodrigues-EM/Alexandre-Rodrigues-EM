@@ -40,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "FirebirdSql.Data.FirebirdClient": {
               "target": "Package",
               "version": "[8.0.1, )"
@@ -104,6 +108,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "FirebirdSql.Data.FirebirdClient": {
               "target": "Package",
               "version": "[8.0.1, )"
@@ -184,6 +192,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "FirebirdSql.Data.FirebirdClient": {
               "target": "Package",
               "version": "[8.0.1, )"

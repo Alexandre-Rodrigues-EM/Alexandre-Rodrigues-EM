@@ -250,10 +250,6 @@ namespace EM.WidowsForms
             this.botaoEditar.Text = "Editar";
             this.botaoEditar.UseVisualStyleBackColor = true;
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = this.botaoPesquisar.Controls;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);

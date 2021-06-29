@@ -6,7 +6,10 @@ namespace EM.Repository
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            AcessoFireBird.TesteDeConexao();
+            AcessoFireBird.InserirDados();
+            AcessoFireBird.GetDados();
+
         }
     }
 }

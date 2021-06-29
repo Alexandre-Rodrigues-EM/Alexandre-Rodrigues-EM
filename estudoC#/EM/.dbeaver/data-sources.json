@@ -13,6 +13,24 @@
 				"database": "C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.db\\EM2.5.FDB",
 				"url": "jdbc:firebirdsql://localhost:3050/C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.db\\EM2.5.FDB",
 				"type": "dev",
+				"auth-model": "native"
+			}
+		},
+		"jaybird-17a5835a06f-6547654b5db2da13": {
+			"provider": "jaybird",
+			"driver": "jaybird",
+			"name": "EM.FDB",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3053",
+				"database": "C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.db\\EM.FDB",
+				"url": "jdbc:firebirdsql://localhost:3053/C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.db\\EM.FDB",
+				"type": "dev",
+				"properties": {
+					"encoding": "UTF8"
+				},
 				"auth-model": "native",
 				"handlers": {}
 			}

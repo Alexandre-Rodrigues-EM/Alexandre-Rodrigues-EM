@@ -23,18 +23,10 @@ namespace EM.Repository
         public void Update(T objeto) 
         { }
 
-        /*
-        public IEnumerable<T> GetAll() 
+        
+      /*  public IEnumerable<T> GetAll() 
         {
-            DataTable tabelaDeTudo = new DataTable();
-            tabelaDeTudo = AcessoFireBird.FireBird_GetDados();
-            List<T> ListaTudo = new List<T>;
-
-            var itemsDaTabela = tabelaDeTudo.AsEnumerable().Select(linha =>
-            {
-                Matricula = linha.Field<T>("MATRICULA"),
-                Nome = linha.Field<T>("NOME")
-            }).ToList();
+            return ;
         }
         
         public IEnumerable<T> Get(predicate:Expression<Func<T,bool>>) 

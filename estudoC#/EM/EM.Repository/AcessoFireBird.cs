@@ -13,28 +13,40 @@ namespace EM.Repository
 {
     public class AcessoFireBird
     {
-     /*   private static readonly AcessoFireBird instanciaFireBird = new AcessoFireBird();
+        private static readonly AcessoFireBird instanciaFireBird = new AcessoFireBird();
         private AcessoFireBird() { }
 
+        //string StringDeConexão = @"database=localhost:c:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.db\EM2.5.fdb;user=sysdba;password=masterkey"; 
         public static AcessoFireBird GetInstancia()
         {
             return instanciaFireBird;
         }
 
-        public FbConnection GetConexao()
+        /* public FbConnection GetConexao()
+         {
+             string parametrosDeConexao = ConfigurationManager.ConnectionStrings["FireBirdConnectionString"].ConnectionString;
+             return new FbConnection(parametrosDeConexao);
+         }
+        */
+        public static void TesteDeConexao()
         {
-            string parametrosDeConexao = ConfigurationManager.ConnectionStrings["FireBirdConnectionString"].ConnectionString;
-            return new FbConnection(parametrosDeConexao);
-        }
-     */
-        public static DataTable GetDados()
-        {
-            using (var conexaoFireBird = new FbConnection("database=localhost:EM2.5.fdb;use=sysdba;password=masterkey"))
+            using (var conexaoBancoDeDados = new FbConnection(@"database=localhost:c:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.db\EM2.5.fdb;user=sysdba;password=masterkey"))
             {
-                conexaoFireBird.Open();
-                using (var transaction = conexaoFireBird.BeginTransaction())
+                conexaoBancoDeDados.Open();
+                Console.Write("Conexão estabelecida");
+                conexaoBancoDeDados.Close();
+
+            }
+        }
+     
+        public static void GetDados()
+        {
+            using (var conexaoBancoDeDados = new FbConnection(@"database=localhost:c:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.db\EM2.5.fdb;user=sysdba;password=masterkey")) //var conexaoBancoDeDados = new FbConnection("FireBirdConnectionString"))
+            {
+                conexaoBancoDeDados.Open();
+                using (var transaction = conexaoBancoDeDados.BeginTransaction())
                 {
-                    using (var comandoSQL = new FbCommand("Select * from Alunos", conexaoFireBird, transaction))
+                    using (var comandoSQL = new FbCommand("Select * from Aluno", conexaoBancoDeDados, transaction))
                     {
                         using (var reader = comandoSQL.ExecuteReader())
                         {
@@ -44,7 +56,11 @@ namespace EM.Repository
                                 var valores = new object[reader.FieldCount];
                                 Tabela.Rows.Add(reader.GetValues(valores));
                             }
-                            return Tabela;
+                            foreach (DataRow coluna in Tabela.Rows)
+                            {
+                                Console.Write(Tabela.Rows);
+                            }
+                               
                         }
                     }
                 }
@@ -52,31 +68,35 @@ namespace EM.Repository
                 FbCommand comando = new FbCommand(mSQL, conexaoFireBird);
                 FbDataAdapter da = new FbDataAdapter(comando);
                 DataTable tabelaDeDados = new DataTable();
-                return tabelaDeDados;
-                */
+                return tabelaDeDados;*/
+                
             }
         }
 
-        public static void InserirDados(Aluno aluno)
+        public static void InserirDados()//Aluno aluno)
         {
-            /*
-            using (var conexaoFireBird = new FbConnection("database=localhost:EM2.5.fdb;use=sysdba;password=masterkey"))
+            
+            using (var conexaoFireBird = new FbConnection(@"database=localhost:c:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.db\EM2.5.fdb;user=sysdba;password=masterkey"))
             {
                 conexaoFireBird.Open();
-                string mSQL = "INSERT into Clientes Values(" + aluno.Matricula + ",'"
+              /*  string mSQL = "INSERT into Aluno Values(" + aluno.Matricula + ",'"
                     + aluno.Nome + "','"
                     + aluno.Sexo + "','"
                     + aluno.Nascimento + "','"
                     + aluno.CPF + "')";
-                using (var comando = new FbCommand())
+              */
+                string mSQL = "INSERT into Aluno (MATRICULA, NOME, SEXO, NASCIMENTO) values(101010101,'Thyago Martins', 1, date '20.04.1980')";
+
+               // using (var comando = new FbCommand())
 
                 
                 FbCommand comando = new FbCommand(mSQL, conexaoFireBird);
                 comando.ExecuteNonQuery();
                 
             }
-            */
+            
         }
+
 
 
     }
