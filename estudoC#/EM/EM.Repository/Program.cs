@@ -7,8 +7,8 @@ namespace EM.Repository
         static void Main(string[] args)
         {
             AcessoFireBird.TesteDeConexao();
-            AcessoFireBird.InserirDados();
-            AcessoFireBird.GetDados();
+           // AcessoFireBird.InserirDados();
+           //AcessoFireBird.GetDados();
 
         }
     }

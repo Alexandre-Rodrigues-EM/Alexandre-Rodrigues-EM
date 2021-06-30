@@ -14,7 +14,7 @@ namespace EM.Repository
     {
         public void Add(T objeto) 
         {
-            this.Add(objeto);
+            AcessoFireBird.InserirDados(objeto);
         }
         public void Remove(T objeto) 
         {
@@ -24,7 +24,8 @@ namespace EM.Repository
         { }
 
         
-      /*  public IEnumerable<T> GetAll() 
+  /*      public IEnumerable<T> GetAll() where T:IEntidade =>
+            typeof(T).Get(
         {
             return ;
         }

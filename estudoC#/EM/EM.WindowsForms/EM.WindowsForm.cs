@@ -26,9 +26,10 @@ namespace EM.WidowsForms
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach(EnumeradorSexo sexo in Enum.GetValues(typeof(EnumeradorSexo)))
-                selecionaSexo.Items.Add(sexo);
-
+            Type tipo = typeof(EnumeradorSexo.Sexo);
+            string[] sexos = tipo.GetEnumNames();
+            foreach (var sexo in sexos)
+                Console.WriteLine(sexo);
         }
 
         private void insereCPF_MouseClick(object sender, MouseEventArgs e)
@@ -63,22 +64,28 @@ namespace EM.WidowsForms
 
         private void botaoAdicionar_Click(object sender, EventArgs e)
         {
-        /*    Aluno aluno = new Aluno()
+            //  if seleciona;
+            Aluno aluno = new Aluno()
             {
                 CPF = insereCPF.Text,
                 Nascimento = Convert.ToDateTime(insereDataDeNascimento.Text),
                 Nome = insereNome.Text,
                 Matricula = Convert.ToInt32(insereNumeroMatricula.Text),
-                Sexo = (EnumeradorSexo)selecionaSexo.SelectedItem
+               // Sexo = Equals(selecionaSexo.Text,EnumeradorSexo.Sexo
             };
 
-            AcessoFireBird.InserirDados(aluno);
-        */
+            new RepositorioAluno().Add(aluno);
+
         }
 
         private void fbConnection1_InfoMessage(object sender, FirebirdSql.Data.FirebirdClient.FbInfoMessageEventArgs e)
         {
             
+        }
+
+        private void botaoEditar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

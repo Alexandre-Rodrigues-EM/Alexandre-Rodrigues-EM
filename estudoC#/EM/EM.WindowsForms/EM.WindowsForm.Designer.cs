@@ -75,7 +75,7 @@ namespace EM.WidowsForms
             this.groupBox1.Size = new System.Drawing.Size(603, 145);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Novo aluno / Editando aluno";
+            this.groupBox1.Text = "Novo aluno";
             // 
             // insereCPF
             // 
@@ -84,7 +84,7 @@ namespace EM.WidowsForms
             this.insereCPF.MaxLength = 11;
             this.insereCPF.Name = "insereCPF";
             this.insereCPF.Size = new System.Drawing.Size(131, 23);
-            this.insereCPF.TabIndex = 13;
+            this.insereCPF.TabIndex = 5;
             this.insereCPF.MouseClick += new System.Windows.Forms.MouseEventHandler(this.insereCPF_MouseClick);
             this.insereCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.insereCPF_KeyPress);
             // 
@@ -96,7 +96,7 @@ namespace EM.WidowsForms
             this.insereNumeroMatricula.MaxLength = 9;
             this.insereNumeroMatricula.Name = "insereNumeroMatricula";
             this.insereNumeroMatricula.Size = new System.Drawing.Size(116, 23);
-            this.insereNumeroMatricula.TabIndex = 12;
+            this.insereNumeroMatricula.TabIndex = 1;
             this.insereNumeroMatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.insereNumeroMatricula.MouseClick += new System.Windows.Forms.MouseEventHandler(this.insereNumeroMatricula_MouseClick);
             this.insereNumeroMatricula.TextChanged += new System.EventHandler(this.insereNumeroMatricula_TextChanged);
@@ -108,7 +108,7 @@ namespace EM.WidowsForms
             this.botaoAdicionar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.botaoAdicionar.Name = "botaoAdicionar";
             this.botaoAdicionar.Size = new System.Drawing.Size(88, 27);
-            this.botaoAdicionar.TabIndex = 11;
+            this.botaoAdicionar.TabIndex = 7;
             this.botaoAdicionar.Text = "Adicionar";
             this.botaoAdicionar.UseVisualStyleBackColor = true;
             this.botaoAdicionar.Click += new System.EventHandler(this.botaoAdicionar_Click);
@@ -119,7 +119,7 @@ namespace EM.WidowsForms
             this.botaoLimpar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.botaoLimpar.Name = "botaoLimpar";
             this.botaoLimpar.Size = new System.Drawing.Size(88, 27);
-            this.botaoLimpar.TabIndex = 10;
+            this.botaoLimpar.TabIndex = 6;
             this.botaoLimpar.Text = "Limpar";
             this.botaoLimpar.UseVisualStyleBackColor = true;
             this.botaoLimpar.Click += new System.EventHandler(this.botaoLimpar_Click);
@@ -131,7 +131,7 @@ namespace EM.WidowsForms
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(28, 15);
-            this.label5.TabIndex = 9;
+            this.label5.TabIndex = 17;
             this.label5.Text = "CPF";
             // 
             // insereDataDeNascimento
@@ -141,7 +141,7 @@ namespace EM.WidowsForms
             this.insereDataDeNascimento.Mask = "00/00/0000";
             this.insereDataDeNascimento.Name = "insereDataDeNascimento";
             this.insereDataDeNascimento.Size = new System.Drawing.Size(116, 23);
-            this.insereDataDeNascimento.TabIndex = 7;
+            this.insereDataDeNascimento.TabIndex = 4;
             this.insereDataDeNascimento.ValidatingType = typeof(System.DateTime);
             this.insereDataDeNascimento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.insereDataDeNascimento_MouseClick);
             // 
@@ -152,7 +152,7 @@ namespace EM.WidowsForms
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 15);
-            this.label4.TabIndex = 6;
+            this.label4.TabIndex = 16;
             this.label4.Text = "Nascimento";
             // 
             // selecionaSexo
@@ -163,7 +163,7 @@ namespace EM.WidowsForms
             this.selecionaSexo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.selecionaSexo.Name = "selecionaSexo";
             this.selecionaSexo.Size = new System.Drawing.Size(126, 23);
-            this.selecionaSexo.TabIndex = 5;
+            this.selecionaSexo.TabIndex = 3;
             // 
             // label3
             // 
@@ -172,7 +172,7 @@ namespace EM.WidowsForms
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 15);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 15;
             this.label3.Text = "Sexo";
             // 
             // insereNome
@@ -181,7 +181,7 @@ namespace EM.WidowsForms
             this.insereNome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.insereNome.Name = "insereNome";
             this.insereNome.Size = new System.Drawing.Size(403, 23);
-            this.insereNome.TabIndex = 3;
+            this.insereNome.TabIndex = 2;
             // 
             // label2
             // 
@@ -190,7 +190,7 @@ namespace EM.WidowsForms
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 15);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 14;
             this.label2.Text = "Nome";
             // 
             // label1
@@ -200,7 +200,7 @@ namespace EM.WidowsForms
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 15);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 13;
             this.label1.Text = "Matrícula";
             // 
             // barraDePesquisa
@@ -209,7 +209,7 @@ namespace EM.WidowsForms
             this.barraDePesquisa.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.barraDePesquisa.Name = "barraDePesquisa";
             this.barraDePesquisa.Size = new System.Drawing.Size(497, 23);
-            this.barraDePesquisa.TabIndex = 1;
+            this.barraDePesquisa.TabIndex = 8;
             // 
             // botaoPesquisar
             // 
@@ -217,7 +217,7 @@ namespace EM.WidowsForms
             this.botaoPesquisar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.botaoPesquisar.Name = "botaoPesquisar";
             this.botaoPesquisar.Size = new System.Drawing.Size(88, 27);
-            this.botaoPesquisar.TabIndex = 2;
+            this.botaoPesquisar.TabIndex = 9;
             this.botaoPesquisar.Text = "Pesquisar";
             this.botaoPesquisar.UseVisualStyleBackColor = true;
             // 
@@ -228,7 +228,7 @@ namespace EM.WidowsForms
             this.dataGrid.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.Size = new System.Drawing.Size(604, 173);
-            this.dataGrid.TabIndex = 3;
+            this.dataGrid.TabIndex = 10;
             // 
             // botaoExcluir
             // 
@@ -236,7 +236,7 @@ namespace EM.WidowsForms
             this.botaoExcluir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.botaoExcluir.Name = "botaoExcluir";
             this.botaoExcluir.Size = new System.Drawing.Size(88, 27);
-            this.botaoExcluir.TabIndex = 4;
+            this.botaoExcluir.TabIndex = 12;
             this.botaoExcluir.Text = "Excluir";
             this.botaoExcluir.UseVisualStyleBackColor = true;
             // 
@@ -246,9 +246,10 @@ namespace EM.WidowsForms
             this.botaoEditar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.botaoEditar.Name = "botaoEditar";
             this.botaoEditar.Size = new System.Drawing.Size(88, 27);
-            this.botaoEditar.TabIndex = 5;
+            this.botaoEditar.TabIndex = 11;
             this.botaoEditar.Text = "Editar";
             this.botaoEditar.UseVisualStyleBackColor = true;
+            this.botaoEditar.Click += new System.EventHandler(this.botaoEditar_Click);
             // 
             // Form1
             // 

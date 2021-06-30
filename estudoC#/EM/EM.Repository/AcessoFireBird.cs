@@ -39,7 +39,7 @@ namespace EM.Repository
             }
         }
      
-        public static void GetDados()
+        /*public static void GetDados()
         {
             using (var conexaoBancoDeDados = new FbConnection(@"database=localhost:c:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.db\EM2.5.fdb;user=sysdba;password=masterkey")) //var conexaoBancoDeDados = new FbConnection("FireBirdConnectionString"))
             {
@@ -51,6 +51,7 @@ namespace EM.Repository
                         using (var reader = comandoSQL.ExecuteReader())
                         {
                             DataTable Tabela = new DataTable();
+
                             while (reader.Read())
                             {
                                 var valores = new object[reader.FieldCount];
@@ -68,31 +69,27 @@ namespace EM.Repository
                 FbCommand comando = new FbCommand(mSQL, conexaoFireBird);
                 FbDataAdapter da = new FbDataAdapter(comando);
                 DataTable tabelaDeDados = new DataTable();
-                return tabelaDeDados;*/
+                return tabelaDeDados;
                 
             }
         }
-
-        public static void InserirDados()//Aluno aluno)
+*/
+        public static void InserirDados<T> (T objeto)
         {
             
             using (var conexaoFireBird = new FbConnection(@"database=localhost:c:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.db\EM2.5.fdb;user=sysdba;password=masterkey"))
             {
                 conexaoFireBird.Open();
-              /*  string mSQL = "INSERT into Aluno Values(" + aluno.Matricula + ",'"
-                    + aluno.Nome + "','"
-                    + aluno.Sexo + "','"
-                    + aluno.Nascimento + "','"
-                    + aluno.CPF + "')";
-              */
-                string mSQL = "INSERT into Aluno (MATRICULA, NOME, SEXO, NASCIMENTO) values(101010101,'Thyago Martins', 1, date '20.04.1980')";
+                string TabelaDestino = Convert.ToString(objeto.GetType().Name);
+                string mSQL = $"INSERT into {TabelaDestino} Values({objeto.ToString()})";
+              
+               // string mSQL = "INSERT into Aluno (MATRICULA, NOME, SEXO, NASCIMENTO) values(101010101,'Thyago Martins', 1, date '20.04.1980')";
 
                // using (var comando = new FbCommand())
 
                 
                 FbCommand comando = new FbCommand(mSQL, conexaoFireBird);
                 comando.ExecuteNonQuery();
-                
             }
             
         }

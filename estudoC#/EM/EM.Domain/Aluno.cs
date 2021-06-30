@@ -8,6 +8,7 @@ namespace EM.Domain
 {
     public class Aluno : IEntidade
     {
+
         public int Matricula { get; set; }
         public string Nome { get; set; }
         public string CPF { get; set; }
@@ -29,10 +30,12 @@ namespace EM.Domain
             return HashCode.Combine(Matricula, Nome);
         }
 
+        
         public override string ToString()
         {
-            string codigoHash = Convert.ToString(this.GetHashCode());
-            return codigoHash;
+            string dataDeNascimento = this.Nascimento.ToString("d");
+            string aluno = @$"({this.Matricula}, '{this.Nome}',{this.Sexo}, date '{dataDeNascimento}',{this.CPF})";
+            return aluno;
         }
 
     }
