@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace EM.Domain
 {
@@ -19,25 +20,7 @@ namespace EM.Domain
     //    Feminino = 1
     //}
 
-    //public class EnumeradorSexo
-    //{
-    //    public EnumeradorSexo(int indice, string descricao)
-    //    {
-    //        Indice = indice;
-    //        Descricao = descricao;
-    //    }
-
-    //    public object Indice { get; private set; }
-    //    public object Descricao { get; private set; }
-
-    //    public int Masculino { get; private set; } = 0;
-    //    public int Feminino { get; private set; } = 1;
-
-    //    EnumeradorSexo Masculino 
-
-
-    //}
-    public class EnumeradorSexo : EnumAttr
+    public class EnumeradorSexo
     {
         public EnumeradorSexo(int indice, string descricao)
         {
@@ -48,26 +31,39 @@ namespace EM.Domain
         public object Indice { get; private set; }
         public object Descricao { get; private set; }
 
-        public static EnumeradorSexo Masculino = new(0, "Masculino");
-
-        public static EnumeradorSexo Feminino = new(1, "Feminino");
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
+        public int Masculino { get; private set; } = 0;
+        public int Feminino { get; private set; } = 1;
 
         public enum Sexo
         {
-            [EnumeradorSexo(0, "Masculino")]
-            Masculino,
-            [EnumeradorSexo(1, "Feminino")]
-            Feminino
+            Masculino = 0,
+            Feminino = 1
         }
 
     }
 
-    
+    //public class EnumeradorSexo
+    //{
+    //    public int Masculino = 0;
+    //    public int Feminino = 1;
+
+    //    public enum Sexo
+    //    {
+    //        Masculino = 0,
+    //        Feminino = 1
+    //    }
+
+    //    public static int ConversorStringInt(string sexo)
+    //    {
+    //        if (sexo == "Masculino")
+    //            return 0;
+    //        else if (sexo == "Feminino")
+    //            return 1;
+
+    //    }
+    //}
+
+
 
 
 

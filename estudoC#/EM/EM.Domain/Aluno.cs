@@ -33,8 +33,8 @@ namespace EM.Domain
         
         public override string ToString()
         {
-            string dataDeNascimento = this.Nascimento.ToString("d");
-            string aluno = @$"({this.Matricula}, '{this.Nome}',{this.Sexo}, date '{dataDeNascimento}',{this.CPF})";
+            string dataDeNascimento = this.Nascimento.ToString("yyyy-MM-dd");
+            string aluno = @$"({this.Matricula}, '{this.Nome}',{this.Sexo.Indice}, DATE '{dataDeNascimento}', '{this.CPF}')";
             return aluno;
         }
 

@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[3.9.5, )"
             },
+            "SpecFlow.Tools.MsBuild.Generation": {
+              "target": "Package",
+              "version": "[3.9.8, )"
+            },
             "SpecRun.SpecFlow": {
               "target": "Package",
               "version": "[3.9.7, )"

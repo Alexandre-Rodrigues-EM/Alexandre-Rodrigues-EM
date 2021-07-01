@@ -39,41 +39,21 @@ namespace EM.Repository
             }
         }
      
-        /*public static void GetDados()
+        public static DataTable GetDados()
         {
             using (var conexaoBancoDeDados = new FbConnection(@"database=localhost:c:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.db\EM2.5.fdb;user=sysdba;password=masterkey")) //var conexaoBancoDeDados = new FbConnection("FireBirdConnectionString"))
             {
                 conexaoBancoDeDados.Open();
-                using (var transaction = conexaoBancoDeDados.BeginTransaction())
-                {
-                    using (var comandoSQL = new FbCommand("Select * from Aluno", conexaoBancoDeDados, transaction))
-                    {
-                        using (var reader = comandoSQL.ExecuteReader())
-                        {
-                            DataTable Tabela = new DataTable();
-
-                            while (reader.Read())
-                            {
-                                var valores = new object[reader.FieldCount];
-                                Tabela.Rows.Add(reader.GetValues(valores));
-                            }
-                            foreach (DataRow coluna in Tabela.Rows)
-                            {
-                                Console.Write(Tabela.Rows);
-                            }
-                               
-                        }
-                    }
-                }
-                /*string mSQL = "Select * from Alunos";
-                FbCommand comando = new FbCommand(mSQL, conexaoFireBird);
+                string mSQL = "Select * from Aluno";
+                FbCommand comando = new FbCommand(mSQL, conexaoBancoDeDados);
                 FbDataAdapter da = new FbDataAdapter(comando);
                 DataTable tabelaDeDados = new DataTable();
+                da.Fill(tabelaDeDados);
                 return tabelaDeDados;
                 
             }
         }
-*/
+
         public static void InserirDados<T> (T objeto)
         {
             
@@ -81,7 +61,7 @@ namespace EM.Repository
             {
                 conexaoFireBird.Open();
                 string TabelaDestino = Convert.ToString(objeto.GetType().Name);
-                string mSQL = $"INSERT into {TabelaDestino} Values({objeto.ToString()})";
+                string mSQL = $"INSERT into {TabelaDestino} Values {objeto.ToString()}";
               
                // string mSQL = "INSERT into Aluno (MATRICULA, NOME, SEXO, NASCIMENTO) values(101010101,'Thyago Martins', 1, date '20.04.1980')";
 
@@ -90,11 +70,27 @@ namespace EM.Repository
                 
                 FbCommand comando = new FbCommand(mSQL, conexaoFireBird);
                 comando.ExecuteNonQuery();
+                conexaoFireBird.Close();
             }
             
         }
 
+        //public static void AlteraDados<T> (T objeto)
+        //{
+        //    conexaoFireBird.Open();
+        //    string TabelaDestino = Convert.ToString(objeto.GetType().Name);
+        //    string mSQL = $"UPDATE into {TabelaDestino}" +
+        //        $"Where Values {objeto.ToString()}";
 
+        //    // string mSQL = "INSERT into Aluno (MATRICULA, NOME, SEXO, NASCIMENTO) values(101010101,'Thyago Martins', 1, date '20.04.1980')";
+
+        //    // using (var comando = new FbCommand())
+
+
+        //    FbCommand comando = new FbCommand(mSQL, conexaoFireBird);
+        //    comando.ExecuteNonQuery();
+        //    conexaoFireBird.Close();
+        //}
 
     }
 }

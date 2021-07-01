@@ -239,6 +239,7 @@ namespace EM.WidowsForms
             this.botaoExcluir.TabIndex = 12;
             this.botaoExcluir.Text = "Excluir";
             this.botaoExcluir.UseVisualStyleBackColor = true;
+            this.botaoExcluir.Click += new System.EventHandler(this.botaoExcluir_Click);
             // 
             // botaoEditar
             // 

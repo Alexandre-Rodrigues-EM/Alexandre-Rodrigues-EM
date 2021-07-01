@@ -7195,6 +7195,7 @@
       "FluentAssertions >= 5.10.3",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "SpecFlow.Plus.LivingDocPlugin >= 3.9.5",
+      "SpecFlow.Tools.MsBuild.Generation >= 3.9.8",
       "SpecRun.SpecFlow >= 3.9.7"
     ]
   },
@@ -7260,6 +7261,10 @@
           "SpecFlow.Plus.LivingDocPlugin": {
             "target": "Package",
             "version": "[3.9.5, )"
+          },
+          "SpecFlow.Tools.MsBuild.Generation": {
+            "target": "Package",
+            "version": "[3.9.8, )"
           },
           "SpecRun.SpecFlow": {
             "target": "Package",

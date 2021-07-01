@@ -12,43 +12,29 @@ namespace EM.Repository
     public class RepositorioAbstrato<T> where T : IEntidade
 
     {
-        public void Add(T objeto) 
+        public virtual void Add(T objeto) 
         {
             AcessoFireBird.InserirDados(objeto);
         }
-        public void Remove(T objeto) 
+        public virtual void Remove(T objeto) 
         {
             this.Remove(objeto);
         }
-        public void Update(T objeto) 
-        { }
-
-        
-  /*      public IEnumerable<T> GetAll() where T:IEntidade =>
-            typeof(T).Get(
+        public virtual void Update(T objeto) 
         {
-            return ;
+
+        }
+
+        public virtual IEnumerable<T> GetAll()
+        {
+            return 
         }
         
-        public IEnumerable<T> Get(predicate:Expression<Func<T,bool>>) 
+        public IEnumerable<T> Get(Expression<Func<T,bool>>:predicate) 
         { }
     */
     }
 
-    public class RepositorioAluno : RepositorioAbstrato<Aluno>
-    {
-        public Aluno GetByMatricula(int matricula)
-        {
-            Aluno aluno = new Aluno();
-
-            return aluno;
-        }
-      /*  
-        public IEnumerable<Aluno> GetByContendoNoNome(string parteDoNome)
-        {
-            List<Aluno> ListaNomesCorrespondentes = new List<Aluno>;
-            BancoDeDados.Get()
-        }
-      */
+    
     }
 }

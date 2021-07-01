@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EM.Domain;
@@ -29,7 +30,10 @@ namespace EM.WidowsForms
             Type tipo = typeof(EnumeradorSexo.Sexo);
             string[] sexos = tipo.GetEnumNames();
             foreach (var sexo in sexos)
-                Console.WriteLine(sexo);
+                selecionaSexo.Items.Add(sexo);
+
+            preencheGrid();
+
         }
 
         private void insereCPF_MouseClick(object sender, MouseEventArgs e)
@@ -64,18 +68,21 @@ namespace EM.WidowsForms
 
         private void botaoAdicionar_Click(object sender, EventArgs e)
         {
-            //  if seleciona;
+
             Aluno aluno = new Aluno()
             {
                 CPF = insereCPF.Text,
                 Nascimento = Convert.ToDateTime(insereDataDeNascimento.Text),
                 Nome = insereNome.Text,
                 Matricula = Convert.ToInt32(insereNumeroMatricula.Text),
-               // Sexo = Equals(selecionaSexo.Text,EnumeradorSexo.Sexo
+                Sexo = new EnumeradorSexo(selecionaSexo.SelectedIndex, selecionaSexo.SelectedItem.ToString())
             };
-
             new RepositorioAluno().Add(aluno);
+        }
 
+        private void preencheGrid()
+        {
+            dataGrid.DataSource = AcessoFireBird.GetDados().DefaultView;
         }
 
         private void fbConnection1_InfoMessage(object sender, FirebirdSql.Data.FirebirdClient.FbInfoMessageEventArgs e)
@@ -84,6 +91,11 @@ namespace EM.WidowsForms
         }
 
         private void botaoEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botaoExcluir_Click(object sender, EventArgs e)
         {
 
         }

@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EM.Repository", "EM.Reposit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EM.WindowsForms", "EM.WindowsForms\EM.WindowsForms.csproj", "{18C3067C-DA6E-4FD6-8B43-EE2F89B5B9CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM.Domain.Teste", "EM.Domain.Teste\EM.Domain.Teste.csproj", "{25AAB411-0F17-4034-B340-531241DC8EFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EM.Domain.Teste", "EM.Domain.Teste\EM.Domain.Teste.csproj", "{25AAB411-0F17-4034-B340-531241DC8EFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EM.Repository.Teste", "EM.Repository.Teste\EM.Repository.Teste.csproj", "{58E253BC-7C56-4E56-88BB-8D79D5B50805}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EM.Repository.Teste", "EM.Repository.Teste\EM.Repository.Teste.csproj", "{58E253BC-7C56-4E56-88BB-8D79D5B50805}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{7D3DA623-A3B8-443A-9497-613083580D68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{58E253BC-7C56-4E56-88BB-8D79D5B50805}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58E253BC-7C56-4E56-88BB-8D79D5B50805}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58E253BC-7C56-4E56-88BB-8D79D5B50805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D3DA623-A3B8-443A-9497-613083580D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D3DA623-A3B8-443A-9497-613083580D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D3DA623-A3B8-443A-9497-613083580D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D3DA623-A3B8-443A-9497-613083580D68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
