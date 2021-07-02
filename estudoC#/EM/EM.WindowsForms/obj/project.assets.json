@@ -24,6 +24,19 @@
           "buildTransitive/netcoreapp3.0/EntityFramework.targets": {}
         }
       },
+      "EntityFramework.Firebird/8.0.1": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "6.4.4",
+          "FirebirdSql.Data.FirebirdClient": "8.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/EntityFramework.Firebird.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/EntityFramework.Firebird.dll": {}
+        }
+      },
       "FirebirdSql.Data.FirebirdClient/8.0.1": {
         "type": "package",
         "compile": {
@@ -327,6 +340,7 @@
         "dependencies": {
           "EM.Domain": "1.0.0",
           "EntityFramework": "6.4.4",
+          "EntityFramework.Firebird": "8.0.1",
           "FirebirdSql.Data.FirebirdClient": "8.0.1",
           "System.Configuration.ConfigurationManager": "5.0.0",
           "System.Runtime": "4.3.1"
@@ -396,6 +410,21 @@
         "tools/netcoreapp3.0/any/ef6.dll",
         "tools/netcoreapp3.0/any/ef6.pdb",
         "tools/netcoreapp3.0/any/ef6.runtimeconfig.json"
+      ]
+    },
+    "EntityFramework.Firebird/8.0.1": {
+      "sha512": "nvmEK90454NU/qIjPSzIx1/izjs7vc+md/7MLWz47elVebMTMLrDnebkjBP3ubzB9ljxIYL3OISPV5vRDml8vw==",
+      "type": "package",
+      "path": "entityframework.firebird/8.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "entityframework.firebird.8.0.1.nupkg.sha512",
+        "entityframework.firebird.nuspec",
+        "firebird-logo.png",
+        "lib/net48/EntityFramework.Firebird.dll",
+        "lib/netstandard2.1/EntityFramework.Firebird.dll",
+        "license.txt"
       ]
     },
     "FirebirdSql.Data.FirebirdClient/8.0.1": {

@@ -200,6 +200,10 @@
               "target": "Package",
               "version": "[6.4.4, )"
             },
+            "EntityFramework.Firebird": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "FirebirdSql.Data.FirebirdClient": {
               "target": "Package",
               "version": "[8.0.1, )"

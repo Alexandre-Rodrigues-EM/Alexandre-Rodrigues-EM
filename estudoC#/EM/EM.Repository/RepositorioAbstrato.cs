@@ -14,7 +14,7 @@ namespace EM.Repository
     {
         public virtual void Add(T objeto) 
         {
-            AcessoFireBird.InserirDados(objeto);
+          
         }
         public virtual void Remove(T objeto) 
         {
@@ -27,14 +27,16 @@ namespace EM.Repository
 
         public virtual IEnumerable<T> GetAll()
         {
-            return 
+            return null;
         }
-        
-        public IEnumerable<T> Get(Expression<Func<T,bool>>:predicate) 
-        { }
-    */
-    }
 
-    
+        public IEnumerable<T> Get(Expression<Func<T, bool>> predicate)
+        {
+            return null;
+        }
+
+
+
+
     }
 }

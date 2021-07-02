@@ -4,7 +4,7 @@
     <Compile Update="EM.WindowsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormularioExclusao.cs">
+    <Compile Update="ConfirmaExclusao.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace EM.WindowsForms
 {
-    public partial class confirmaExclusao : Form
+    public partial class formConfirmaExclusao : Form
     {
         private Form1 formPrincipal;
-        public confirmaExclusao(Form1 formPrincipal)
+        public formConfirmaExclusao(Form1 formPrincipal)
         {
             this.formPrincipal = formPrincipal;
             InitializeComponent();

@@ -39,7 +39,7 @@ namespace EM.Repository
             }
         }
      
-        public static DataTable GetDados()
+        public static DataSet GetDados(DataSet dataSet)
         {
             using (var conexaoBancoDeDados = new FbConnection(@"database=localhost:c:\Users\Alexandre - Estagio\Documents\Alexandre-Rodrigues-EM\estudoC#\EM\EM.db\EM2.5.fdb;user=sysdba;password=masterkey")) //var conexaoBancoDeDados = new FbConnection("FireBirdConnectionString"))
             {
@@ -47,9 +47,8 @@ namespace EM.Repository
                 string mSQL = "Select * from Aluno";
                 FbCommand comando = new FbCommand(mSQL, conexaoBancoDeDados);
                 FbDataAdapter da = new FbDataAdapter(comando);
-                DataTable tabelaDeDados = new DataTable();
-                da.Fill(tabelaDeDados);
-                return tabelaDeDados;
+                da.Fill(dataSet);
+                return dataSet;
                 
             }
         }

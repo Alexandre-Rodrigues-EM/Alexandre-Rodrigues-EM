@@ -18,8 +18,8 @@ namespace EM.Repository
             {
                 conexaoFireBird.Open();
 
-                
-                string mSQL = $"INSERT into ALUNO Values {objeto.ToString()}";
+
+                string mSQL = $"INSERT into ALUNO Values {aluno.ToString()}";
 
                 FbCommand comando = new FbCommand(mSQL, conexaoFireBird);
 
@@ -49,6 +49,12 @@ namespace EM.Repository
 
         }
 
+        public override IEnumerable<Aluno> GetAll()
+        {
+            List<Aluno> ListaTodosAlunos = new List<Aluno>();
+
+            return ListaTodosAlunos;
+        }
         public Aluno GetByMatricula(int matricula)
         {
             Aluno aluno = new Aluno();
@@ -63,3 +69,4 @@ namespace EM.Repository
           }
         */
     }
+}

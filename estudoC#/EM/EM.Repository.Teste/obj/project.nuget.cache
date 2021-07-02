@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "mW8PtUVW1VROyu+XMFNbFIj9Izh39N7HbSkPOau188k6ndTH6bOBV9/OXJdXliM2w+94yU60mI9r8e2JJIHLUg==",
+  "dgSpecHash": "MOVZvI+l161SpS3BtKQPoWxYdkvmSh6k5ssr1cWfIquOfr/ggv55XwIjhfyBtKjIyezrPkrxsbgubsGjef+Otw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.Repository.Teste\\EM.Repository.Teste.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
     "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\cucumber.messages\\6.0.1\\cucumber.messages.6.0.1.nupkg.sha512",
     "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\entityframework.firebird\\8.0.1\\entityframework.firebird.8.0.1.nupkg.sha512",
     "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\firebirdsql.data.firebirdclient\\8.0.1\\firebirdsql.data.firebirdclient.8.0.1.nupkg.sha512",
     "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
     "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\gherkin\\19.0.3\\gherkin.19.0.3.nupkg.sha512",

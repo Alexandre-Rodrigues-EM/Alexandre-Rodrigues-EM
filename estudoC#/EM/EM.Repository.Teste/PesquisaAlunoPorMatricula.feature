@@ -1,4 +1,4 @@
-﻿Feature: Feature3
+﻿Feature: Feature1
 
 A short summary of the feature
 

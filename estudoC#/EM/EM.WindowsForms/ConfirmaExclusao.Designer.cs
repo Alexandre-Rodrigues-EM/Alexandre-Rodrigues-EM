@@ -1,7 +1,7 @@
 ﻿
 namespace EM.WindowsForms
 {
-    partial class confirmaExclusao
+    partial class formConfirmaExclusao
     {
         /// <summary>
         /// Required designer variable.

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gV22vnORDZyzvGPr/kemsERiq0eRtqZX/VG3ulZQsQTq3bfBlTn7Dm0bROIpguv1OZn7cYVDeswYUyi83EA8jQ==",
+  "dgSpecHash": "kKHcfh9JNBGYJwcNs7RFgk/DE16fqLbjYfkCzWm/eB5ScbnYc2nuvgAhMT9Ee6CoCG2WfCg2bOmUYYON/rJPHg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alexandre - Estagio\\Documents\\Alexandre-Rodrigues-EM\\estudoC#\\EM\\EM.Repository\\EM.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\entityframework.firebird\\8.0.1\\entityframework.firebird.8.0.1.nupkg.sha512",
     "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\firebirdsql.data.firebirdclient\\8.0.1\\firebirdsql.data.firebirdclient.8.0.1.nupkg.sha512",
     "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Alexandre - Estagio\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
